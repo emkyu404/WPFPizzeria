@@ -1,11 +1,17 @@
-using System;
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
 
-public class Item {
-    float price;
+namespace Projet_Pizzaria
+{
+    class Item
+    {
+        public float price;
 
+        public Item(float price)
+        {
+            this.price = price;
+        }
 
-    public Item(float price){
-        this.price = price;
     }
-
 }

@@ -1,19 +1,25 @@
 using System;
 
-enum drinkType{
-    juice,
-    coke,
-    lemonade,
-    beer,
-    iceTea
-}
-
-public class Drink : Item{
-    drinkType dtype;
-
-    public Pizza(drinkType dtype, float price){
-        this.dtype = dtype;
-        this.price = price;
+namespace Projet_Pizzaria
+{
+    enum drinkType
+    {
+        juice,
+        coke,
+        lemonade,
+        beer,
+        iceTea
     }
 
+    class Drink : Item
+    {
+        public drinkType dtype;
+
+        public Drink(drinkType dtype, float price) : base(price)
+        {
+            this.dtype = dtype;
+            this.price = price;
+        }
+
+    }
 }

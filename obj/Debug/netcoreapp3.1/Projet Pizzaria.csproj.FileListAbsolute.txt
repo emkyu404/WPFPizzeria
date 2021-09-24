@@ -18,3 +18,23 @@ D:\daftp\Documents\EFREI\M1\Intégration système\Applications\Projet\Projet Piz
 D:\daftp\Documents\EFREI\M1\Intégration système\Applications\Projet\Projet Pizzaria\obj\Debug\netcoreapp3.1\Projet Pizzaria.dll
 D:\daftp\Documents\EFREI\M1\Intégration système\Applications\Projet\Projet Pizzaria\obj\Debug\netcoreapp3.1\Projet Pizzaria.pdb
 D:\daftp\Documents\EFREI\M1\Intégration système\Applications\Projet\Projet Pizzaria\obj\Debug\netcoreapp3.1\Projet Pizzaria.genruntimeconfig.cache
+C:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\obj\Debug\netcoreapp3.1\Projet Pizzaria.csproj.AssemblyReference.cache
+C:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\obj\Debug\netcoreapp3.1\MainWindow.g.cs
+C:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\obj\Debug\netcoreapp3.1\App.g.cs
+C:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\obj\Debug\netcoreapp3.1\Projet Pizzaria_MarkupCompile.cache
+C:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\obj\Debug\netcoreapp3.1\Projet Pizzaria_MarkupCompile.lref
+C:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\obj\Debug\netcoreapp3.1\Projet Pizzaria.dll
+C:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\obj\Debug\netcoreapp3.1\Projet Pizzaria.pdb
+C:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\bin\Debug\netcoreapp3.1\Projet Pizzaria.exe
+C:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\bin\Debug\netcoreapp3.1\Projet Pizzaria.deps.json
+C:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\bin\Debug\netcoreapp3.1\Projet Pizzaria.runtimeconfig.json
+C:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\bin\Debug\netcoreapp3.1\Projet Pizzaria.runtimeconfig.dev.json
+C:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\bin\Debug\netcoreapp3.1\Projet Pizzaria.dll
+C:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\bin\Debug\netcoreapp3.1\Projet Pizzaria.pdb
+C:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\obj\Debug\netcoreapp3.1\MainWindow.baml
+C:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\obj\Debug\netcoreapp3.1\Projet Pizzaria.g.resources
+C:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\obj\Debug\netcoreapp3.1\Projet Pizzaria.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\obj\Debug\netcoreapp3.1\Projet Pizzaria.AssemblyInfoInputs.cache
+C:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\obj\Debug\netcoreapp3.1\Projet Pizzaria.AssemblyInfo.cs
+C:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\obj\Debug\netcoreapp3.1\Projet Pizzaria.csproj.CoreCompileInputs.cache
+C:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\obj\Debug\netcoreapp3.1\Projet Pizzaria.genruntimeconfig.cache
