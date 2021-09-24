@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "Projet Pizzaria/1.0.0": {
+        "runtime": {
+          "Projet Pizzaria.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Projet Pizzaria/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
