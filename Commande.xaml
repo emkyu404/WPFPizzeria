@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Projet_Pizzaria"
         mc:Ignorable="d"
         Title="Commande" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+    <local:Create_Order_Page>
+
+    </local:Create_Order_Page>
 </Window>

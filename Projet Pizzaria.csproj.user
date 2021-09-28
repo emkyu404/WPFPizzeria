@@ -10,9 +10,15 @@
     <Compile Update="Commande.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Create_Order_Page.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="Commande.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Create_Order_Page.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">

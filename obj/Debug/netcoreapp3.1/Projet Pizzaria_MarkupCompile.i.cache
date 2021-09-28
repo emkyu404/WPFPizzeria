@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
 D:\daftp\Documents\EFREI\M1\Intégration système\Applications\Projet\Projet Pizzaria\App.xaml
-2-24548367
+3-1536411575
 
-141561261531
+151959067597
 192-1533232326
-Commande.xaml;MainWindow.xaml;
+Commande.xaml;Create_Order_Page.xaml;MainWindow.xaml;
 
-True
+False
 
