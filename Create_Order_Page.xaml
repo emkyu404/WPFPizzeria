@@ -17,15 +17,22 @@
                 <Button Click="alreadyRegisteredClientClick">Non</Button>
             </StackPanel>
 
+            <StackPanel Name="ClientInfo">
+                <TextBlock Name="ClientName"></TextBlock>
+                <TextBlock Name="ClientPN"></TextBlock>
+                <TextBlock Name="ClientAddress"></TextBlock>
+            </StackPanel>
+
             <StackPanel Name="registerClientPnl">
                 <Label>Nom :</Label>
-                <TextBox Grid.Column="1"/>
+                <TextBox Name="tbName"/>
                 <Label>Prénom:</Label>
-                <TextBox></TextBox>
+                <TextBox Name="tbSurname"></TextBox>
                 <Label>Numéro de téléphone</Label>
-                <TextBox></TextBox>
+                <TextBox Name="tbPhoneNumber"></TextBox>
                 <Label>Adresse</Label>
-                <TextBox></TextBox>
+                <TextBox Name="tbAddress"></TextBox>
+                <Button Click="confirmRegisterClick">Valider</Button>
             </StackPanel>
             
             <StackPanel Name="findClientPnl">

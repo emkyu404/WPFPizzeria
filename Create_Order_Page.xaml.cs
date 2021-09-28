@@ -19,6 +19,7 @@ namespace Projet_Pizzaria
     /// </summary>
     public partial class Create_Order_Page : Page
     {
+        private Client currentClient;
         public Create_Order_Page()
         {
             InitializeComponent();
@@ -43,6 +44,24 @@ namespace Projet_Pizzaria
             registerClientPnl.Visibility = Visibility.Visible;
             findClientPnl.Visibility = Visibility.Collapsed;
             QuestionBoxPnl.Visibility = Visibility.Collapsed;
+        }
+
+        private void confirmRegisterClick(object sender, RoutedEventArgs e)
+        {
+            currentClient = new Client(tbName.Text, tbSurname.Text, tbPhoneNumber.Text, tbAddress.Text);
+            tbName.Text = "";
+            tbSurname.Text = "";
+            tbPhoneNumber.Text = "";
+            tbAddress.Text = "";
+
+            updateClientInfo();
+        }
+
+        private void updateClientInfo()
+        {
+            ClientAddress.Text = currentClient.getAddress();
+            ClientName.Text = currentClient.getName();
+            ClientPN.Text = currentClient.getPhoneNumber();
         }
     }
 }

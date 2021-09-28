@@ -36,6 +36,11 @@ namespace Projet_Pizzaria
             return phoneNumber;
         }
 
+        public string getAddress()
+        {
+            return address;
+        }
+
         public Client getClientByPhoneNumber(string pn)
         {
             Client c = RegisteredClient.FirstOrDefault(cl => cl.getPhoneNumber() == pn);
