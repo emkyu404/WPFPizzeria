@@ -1,7 +1,8 @@
 using System;
 
 namespace Projet_Pizzaria { 
-    enum pizzaType{
+    enum PizzaType
+    {
         Margharita,
         Napoletana,
         Bufala,
@@ -10,7 +11,7 @@ namespace Projet_Pizzaria {
         Formaggi 
     }
 
-    enum pizzaSize
+    enum PizzaSize
     {
         small,
         medium,
@@ -19,10 +20,10 @@ namespace Projet_Pizzaria {
 
     class Pizza : Item
     {
-        pizzaSize size;
-        pizzaType ptype;
+        PizzaSize size;
+        PizzaType ptype;
 
-        public Pizza(pizzaSize size, pizzaType ptype, float price) : base (price)
+        public Pizza(PizzaSize size, PizzaType ptype, float price) : base (price)
         {
             this.size = size;
             this.ptype = ptype;
