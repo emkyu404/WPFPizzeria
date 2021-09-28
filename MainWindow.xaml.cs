@@ -30,5 +30,11 @@ namespace Projet_Pizzaria
             Commande cmd = new Commande();
             cmd.Show();
         }
+
+        private void Button_Client_Effectif_Click(object sender, RoutedEventArgs e)
+        {
+            MenuClientEffectif mce = new MenuClientEffectif();
+            mce.Show();
+        }
     }
 }
