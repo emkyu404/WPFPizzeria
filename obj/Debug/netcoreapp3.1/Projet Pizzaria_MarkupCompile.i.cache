@@ -4,22 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\obj\Debug\netcoreapp3.1\
+D:\daftp\Documents\EFREI\M1\Intégration système\Applications\Projet\Projet Pizzaria\obj\Debug\netcoreapp3.1\
 Projet_Pizzaria
 none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
-<<<<<<< HEAD
 D:\daftp\Documents\EFREI\M1\Intégration système\Applications\Projet\Projet Pizzaria\App.xaml
 3-1536411575
-=======
-C:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\App.xaml
-2-24548367
->>>>>>> 419479fecb99a51028ccdd86393801efbd7ac5a7
 
 151959067597
 192-1533232326
 Commande.xaml;Create_Order_Page.xaml;MainWindow.xaml;
 
-False
+True
 

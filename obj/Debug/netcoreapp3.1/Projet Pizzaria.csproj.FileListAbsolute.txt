@@ -43,3 +43,8 @@ D:\daftp\Documents\EFREI\M1\Intégration système\Applications\Projet\Projet Piz
 D:\daftp\Documents\EFREI\M1\Intégration système\Applications\Projet\Projet Pizzaria\obj\Debug\netcoreapp3.1\Create_Order_Page.g.cs
 D:\daftp\Documents\EFREI\M1\Intégration système\Applications\Projet\Projet Pizzaria\obj\Debug\netcoreapp3.1\GeneratedInternalTypeHelper.g.cs
 D:\daftp\Documents\EFREI\M1\Intégration système\Applications\Projet\Projet Pizzaria\obj\Debug\netcoreapp3.1\Create_Order_Page.baml
+C:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\obj\Debug\netcoreapp3.1\Commande.g.cs
+C:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\obj\Debug\netcoreapp3.1\Create_Order_Page.g.cs
+C:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\obj\Debug\netcoreapp3.1\GeneratedInternalTypeHelper.g.cs
+C:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\obj\Debug\netcoreapp3.1\Commande.baml
+C:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\obj\Debug\netcoreapp3.1\Create_Order_Page.baml
