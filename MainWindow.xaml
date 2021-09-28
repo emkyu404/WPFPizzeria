@@ -7,6 +7,11 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-
+        <StackPanel HorizontalAlignment="Left">
+            <Button Click="Button_Command_Click"> Module Commmande </Button>
+            <Button> Module Statistique </Button>
+            <Button> Module Client / Effectif </Button>
+            <Button > Module Communication </Button>
+        </StackPanel>
     </Grid>
 </Window>

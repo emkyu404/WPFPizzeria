@@ -38,3 +38,5 @@ C:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\obj\Debug\netcoreapp3.1\Proj
 C:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\obj\Debug\netcoreapp3.1\Projet Pizzaria.AssemblyInfo.cs
 C:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\obj\Debug\netcoreapp3.1\Projet Pizzaria.csproj.CoreCompileInputs.cache
 C:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\obj\Debug\netcoreapp3.1\Projet Pizzaria.genruntimeconfig.cache
+D:\daftp\Documents\EFREI\M1\Intégration système\Applications\Projet\Projet Pizzaria\obj\Debug\netcoreapp3.1\Commande.g.cs
+D:\daftp\Documents\EFREI\M1\Intégration système\Applications\Projet\Projet Pizzaria\obj\Debug\netcoreapp3.1\Commande.baml
