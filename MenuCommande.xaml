@@ -10,9 +10,12 @@
         <Label Content="Création d'une commande&#xD;&#xA;" HorizontalAlignment="Center" Margin="0,29,0,0" VerticalAlignment="Top" Width="151" Height="26"/>
         <Canvas HorizontalAlignment="Center" Height="325" Margin="0,60,0,0" VerticalAlignment="Top" Width="716" Background="#FFEEEEEE">
             <Label Content="Numéro de téléphone du client" Height="25" Canvas.Left="51" Canvas.Top="35" Width="179"/>
-            <TextBox x:Name="TelTextBox" Canvas.Left="238" Canvas.Top="39" Text="TextBox" TextWrapping="Wrap" Width="120"/>
+            <TextBox x:Name="TelTextBox" Canvas.Left="238" Canvas.Top="39" Text="TextBox" TextWrapping="Wrap" Width="120" LostFocus="TelTextBox_LostFocus"/>
             <Button Content="Nouveau client" Height="21" Canvas.Left="379" Canvas.Top="39" Width="96" Click="Button_Click"/>
+            <Button Content="Button" Height="27" Canvas.Left="51" Canvas.Top="111" Width="125" Click="Button_Click_1"/>
         </Canvas>
+        <Label Content="Client Actuel :&#xD;&#xA;" HorizontalAlignment="Left" Margin="94,123,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.223,3.999" Width="100" Height="26"/>
+        <Label x:Name="ClientNameLabel" Content="" HorizontalAlignment="Left" Margin="199,123,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.223,3.999" Width="100" Height="26"/>
 
     </Grid>
 </Window>

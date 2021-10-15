@@ -32,14 +32,15 @@ namespace Projet_Pizzaria
         {
             get => firstorderdate;
         }
-        
 
-        private static List<Client> RegisteredClient = new List<Client>()
+
+        private static List<Client> RegisteredClient = new List<Client>();
+        /* ça bug si tu fais l'initialisation ici, créer une méthode statique que tu appelle à l'ouverture de mainwindow à la limite
         {
         new Client("Antoine", "azdefzgrethr", "0114564367", new Address(66, "Rue Camille Desmoulins", 6454230, "aachan")),
         new Client("dfghlhh", "qsdfsgd", "0616846691", new Address(896, "Rue Camille Desmoulins", 54230, "Cachan")),
         new Client("qsdfgkjhljmk", "sfdghsd", "0547896516846691", new Address(96, "Rue Camille Desmoulins", 14230, "hachan"))
-        };
+        };*/
 
         public Client(string name, string surname, string phoneNumber, Address address)
         {
@@ -48,8 +49,8 @@ namespace Projet_Pizzaria
             this.phoneNumber = phoneNumber;
             this.firstOrderDate = DateTime.Now;
             this.address = address;
-
-            //RegisteredClient.Add(this);
+            
+            RegisteredClient.Add(this);
         }
 
 
@@ -59,11 +60,11 @@ namespace Projet_Pizzaria
 
         public string City => address.City;
 
-        //public Client getClientByPhoneNumber(string pn)
-        //{
-        //    Client c = RegisteredClient.FirstOrDefault(cl => cl.getPhoneNumber() == pn);
-        //    return c;
-        //}
+        public static Client getClientByPhoneNumber(string pn)
+        {
+            Client c = RegisteredClient.FirstOrDefault(cl => cl.PhoneNumber == pn);
+            return c;
+        }
 
         public static List<Client> getRegisteredClient()
         {
