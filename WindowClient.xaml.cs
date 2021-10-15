@@ -109,6 +109,7 @@ namespace Projet_Pizzaria
             Client c = (Client)clientsList.SelectedItem;
             clients.Remove(c);
             Client.getRegisteredClient().Remove(c);
+            MessageBox.Show("Client supprimé");
         }
 
         private void Button_Add_Click(object sender, RoutedEventArgs e)

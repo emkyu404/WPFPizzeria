@@ -49,6 +49,11 @@ namespace Projet_Pizzaria
 
         public string City => address.City;
 
+        public static List<Employee> getRegisteredEmployees()
+        {
+            return RegisteredEmployees;
+        }
+
         public int getNumber()
         {
             return number;

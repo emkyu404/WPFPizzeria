@@ -15,9 +15,15 @@ namespace Projet_Pizzaria
     {
         //List<Employee> employees = new List<Employee>();
         ObservableCollection<Employee> employees = new ObservableCollection<Employee>();
+
         public WindowEmployee()
         {
             InitializeComponent();
+
+            foreach (Employee emp in Employee.getRegisteredEmployees())
+            {
+                employees.Add(emp);
+            }
             employeesList.ItemsSource = employees;
 
             CollectionView view = (CollectionView)CollectionViewSource.GetDefaultView(employeesList.ItemsSource);
@@ -99,9 +105,10 @@ namespace Projet_Pizzaria
 
         private void Button_Delete_Click(object sender, RoutedEventArgs e)
         {
-            Window wce = new MenuClientEmployee();
-            wce.Show();
-            Close();
+            Employee emp = (Employee)employeesList.SelectedItem;
+            employees.Remove(emp);
+            Employee.getRegisteredEmployees().Remove(emp);
+            MessageBox.Show("Employé supprimé");
         }
 
         private void Button_Add_Click(object sender, RoutedEventArgs e)
