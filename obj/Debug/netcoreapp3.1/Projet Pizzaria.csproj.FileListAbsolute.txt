@@ -87,3 +87,9 @@ E:\EFREI\Projet Pizzeria\WPFPizzeria\obj\Debug\netcoreapp3.1\Projet Pizzaria.dll
 E:\EFREI\Projet Pizzeria\WPFPizzeria\obj\Debug\netcoreapp3.1\Projet Pizzaria.pdb
 E:\EFREI\Projet Pizzeria\WPFPizzeria\obj\Debug\netcoreapp3.1\Projet Pizzaria.genruntimeconfig.cache
 >>>>>>> 7bbff14b2ba9f445ec3f6e7cd7e154fa5274a4a3
+E:\EFREI\Projet Pizzeria\WPFPizzeria\obj\Debug\netcoreapp3.1\Create_Order_Page.g.cs
+E:\EFREI\Projet Pizzeria\WPFPizzeria\obj\Debug\netcoreapp3.1\MenuClientEmployee.g.cs
+E:\EFREI\Projet Pizzeria\WPFPizzeria\obj\Debug\netcoreapp3.1\WindowEmployee.g.cs
+E:\EFREI\Projet Pizzeria\WPFPizzeria\obj\Debug\netcoreapp3.1\Create_Order_Page.baml
+E:\EFREI\Projet Pizzeria\WPFPizzeria\obj\Debug\netcoreapp3.1\MenuClientEmployee.baml
+E:\EFREI\Projet Pizzeria\WPFPizzeria\obj\Debug\netcoreapp3.1\WindowEmployee.baml

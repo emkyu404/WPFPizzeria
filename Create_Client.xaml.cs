@@ -44,9 +44,16 @@ namespace Projet_Pizzaria
         {
             if (InputsNotNull())
             {
-                new Client(NameTextBox.Text, SurnameTextBox.Text, TelTextBox.Text, AdressTextBox.Text);
-                MessageBox.Show("Nouveau client créer !");
-                this.Close();
+                try
+                {
+                    new Client(NameTextBox.Text, SurnameTextBox.Text, TelTextBox.Text, new Address(Int32.Parse(StreetNumberTextBox.Text), AddressTextBox.Text, Int32.Parse(StreetNumberTextBox.Text), CityTextBox.Text));
+                    MessageBox.Show("Nouveau client créer !");
+                    this.Close();
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show("Une erreur est survenu, veuillez vérifier chaque champs");
+                }
             }
             else
             {

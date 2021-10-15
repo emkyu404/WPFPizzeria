@@ -1,17 +1,9 @@
 ﻿
 
-<<<<<<< HEAD
-FC:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\Commande.xaml;;
-FC:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\Create_Order_Page.xaml;;
-FC:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\MainWindow.xaml;;
-FC:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\MenuClientEmployee.xaml;;
-FC:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\WindowEmployee.xaml;;
-=======
 FE:\EFREI\Projet Pizzeria\WPFPizzeria\Create_Client.xaml;;
+FE:\EFREI\Projet Pizzeria\WPFPizzeria\Create_Order_Page.xaml;;
 FE:\EFREI\Projet Pizzeria\WPFPizzeria\MainWindow.xaml;;
-FE:\EFREI\Projet Pizzeria\WPFPizzeria\MenuClientEffectif.xaml;;
+FE:\EFREI\Projet Pizzeria\WPFPizzeria\MenuClientEmployee.xaml;;
 FE:\EFREI\Projet Pizzeria\WPFPizzeria\MenuCommande.xaml;;
-FE:\EFREI\Projet Pizzeria\WPFPizzeria\WindowClient.xaml;;
-FE:\EFREI\Projet Pizzeria\WPFPizzeria\WindowEffectif.xaml;;
->>>>>>> 7bbff14b2ba9f445ec3f6e7cd7e154fa5274a4a3
+FE:\EFREI\Projet Pizzeria\WPFPizzeria\WindowEmployee.xaml;;
 

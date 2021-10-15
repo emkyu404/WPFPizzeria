@@ -8,20 +8,26 @@
         Title="Create_Client" Height="450" Width="800">
     <Grid>
 
-        <Canvas x:Name="ConfirmButtonTextBox" HorizontalAlignment="Center" Height="305" VerticalAlignment="Center" Width="656" Background="#FFF1F1F1">
+        <Canvas x:Name="ConfirmButtonTextBox" HorizontalAlignment="Center" Height="332" VerticalAlignment="Center" Width="656" Background="#FFF1F1F1">
             <Label Content="Nom du client" Height="28" Canvas.Left="32" Canvas.Top="34" Width="104"/>
             <Label Content="Prénom du client" Height="28" Canvas.Left="32" Canvas.Top="67" Width="104"/>
             <Label Content="N° de téléphone" Height="28" Canvas.Left="32" Canvas.Top="100" Width="104"/>
-            <Label Content="Adresse" Height="28" Canvas.Left="32" Canvas.Top="128" Width="104"/>
+            <Label Content="N° de rue" Height="28" Canvas.Left="32" Canvas.Top="128" Width="104"/>
             <Grid x:Name="TextBoxGrid" Height="107" Canvas.Left="158" Canvas.Top="39" Width="350">
                 <TextBox x:Name="NameTextBox" TextWrapping="Wrap" Margin="0,0,230,89"/>
                 <TextBox x:Name="SurnameTextBox" TextWrapping="Wrap" Margin="0,33,230,56"/>
                 <TextBox x:Name="TelTextBox" TextWrapping="Wrap" Margin="0,61,230,28"/>
-                <TextBox x:Name="AdressTextBox" TextWrapping="Wrap" Margin="0,89,0,0"/>
+                <TextBox x:Name="StreetNumberTextBox" TextWrapping="Wrap" Margin="0,92,272,0"/>
+                <TextBox x:Name="AddressTextBox" TextWrapping="Wrap" Margin="0,122,0,-33"/>
+                <TextBox x:Name="CityTextBox" TextWrapping="Wrap" Margin="0,149,205,-60"/>
+                <TextBox x:Name="ZipCodeTextBox" TextWrapping="Wrap" Margin="0,176,205,-87"/>
             </Grid>
-            <Button x:Name="CancelButton" Content="Annuler" Canvas.Left="305" Canvas.Top="233" Click="CancelButton_Click" Height="42" Width="140"/>
-            <StackPanel Height="122" Canvas.Left="147" Canvas.Top="34" Width="396"/>
-            <Button Content="Créer un nouveau client" Height="42" Canvas.Left="470" Canvas.Top="233" Width="156" Click="Button_Click"/>
+            <Button x:Name="CancelButton" Content="Annuler" Canvas.Left="333" Canvas.Top="280" Click="CancelButton_Click" Height="42" Width="140"/>
+            <StackPanel Height="182" Canvas.Left="147" Canvas.Top="34" Width="396"/>
+            <Button Content="Créer un nouveau client" Height="42" Canvas.Left="490" Canvas.Top="280" Width="156" Click="Button_Click"/>
+            <Label Content="Nom de la rue" Height="28" Canvas.Left="32" Canvas.Top="156" Width="104"/>
+            <Label Content="Ville" Height="28" Canvas.Left="32" Canvas.Top="184" Width="104"/>
+            <Label Content="Code postale" Height="28" Canvas.Left="32" Canvas.Top="212" Width="104"/>
         </Canvas>
         <Label Content="Création d'un nouveau client" HorizontalAlignment="Center" Margin="0,22,0,0" VerticalAlignment="Top"/>
 

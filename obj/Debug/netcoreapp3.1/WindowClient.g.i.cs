@@ -68,7 +68,7 @@ namespace Projet_Pizzaria {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Projet Pizzaria;V1.0.0.0;component/windowclient.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Projet Pizzaria;component/windowclient.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\WindowClient.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
