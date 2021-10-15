@@ -4,13 +4,13 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="Client" Height="auto" Width="auto"
+        Title="Clients" Height="auto" Width="auto"
         Closing="DataWindow_Closing"
         >
     <DockPanel Margin="10">
         <Label Content="Recherche par ville : " Width="200" DockPanel.Dock="Top" HorizontalAlignment="Left" Margin="10,0,0,0" Height="31" VerticalAlignment="Top"/>
         <TextBox DockPanel.Dock="Top" Margin="10,0,0,10" Name="txtFilter" TextChanged="txtFilter_TextChanged" Width="200" VerticalAlignment="Stretch" VerticalContentAlignment="Top" HorizontalAlignment="Left" />
-        <ListView Margin="10" Name="clientsList" GridViewColumnHeader.Click="NameHeaderClickedHandler" DockPanel.Dock="Top" SelectionChanged="clientsList_SelectionChanged" Height="121">
+        <ListView Margin="10" Name="clientsList" GridViewColumnHeader.Click="NameHeaderClickedHandler" DockPanel.Dock="Top" SelectionChanged="clientsList_SelectionChanged" Height="350">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Name" Width="120" DisplayMemberBinding="{Binding Name}" />
@@ -19,6 +19,7 @@
                     <GridViewColumn Header="Address" Width="300" DisplayMemberBinding="{Binding Address}" />
                     <GridViewColumn Header="ZipCode" Width="120" DisplayMemberBinding="{Binding ZipCode}" />
                     <GridViewColumn Header="City" Width="120" DisplayMemberBinding="{Binding City}" />
+                    <GridViewColumn Header="FirstOrderDate" Width="150" DisplayMemberBinding="{Binding FirstOrderDate}" />
                 </GridView>
             </ListView.View>
         </ListView>

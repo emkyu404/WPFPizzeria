@@ -28,9 +28,9 @@ namespace Projet_Pizzaria
             get => phoneNumber;
             set => phoneNumber = value;
         }
-        public DateTime firstorderdate
+        public DateTime FirstOrderDate
         {
-            get => firstorderdate;
+            get => firstOrderDate;
         }
 
 
@@ -47,7 +47,7 @@ namespace Projet_Pizzaria
             this.name = name;
             this.surname = surname;
             this.phoneNumber = phoneNumber;
-            this.firstOrderDate = DateTime.Now;
+            firstOrderDate = DateTime.Now;
             this.address = address;
             
             RegisteredClient.Add(this);

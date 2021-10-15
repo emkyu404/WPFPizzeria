@@ -137,7 +137,6 @@ namespace Projet_Pizzaria
             employees.RemoveAt(index);
             employees.Insert(index, selectedEmployee);
             Employee.getRegisteredEmployees().RemoveAt(index);
-            Employee.getRegisteredEmployees().Insert(index, selectedEmployee);
 
             TextBoxNumber.Clear();
             TextBoxName.Clear();

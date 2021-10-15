@@ -125,7 +125,6 @@ namespace Projet_Pizzaria
             clients.RemoveAt(index);
             clients.Insert(index, selectedClient);
             Client.getRegisteredClient().RemoveAt(index);
-            Client.getRegisteredClient().Insert(index, selectedClient);
 
             TextBoxName.Clear();
             TextBoxSurname.Clear();

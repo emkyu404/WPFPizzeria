@@ -9,7 +9,7 @@
     <DockPanel Margin="10">
         <Label Content="Recherche par ville : " Width="200" DockPanel.Dock="Top" HorizontalAlignment="Left" Margin="10,0,0,0" Height="31" VerticalAlignment="Top"/>
         <TextBox DockPanel.Dock="Top" Margin="11,0,0,10" Name="txtFilter" TextChanged="txtFilter_TextChanged" Width="200" VerticalAlignment="Stretch" VerticalContentAlignment="Top" HorizontalAlignment="Left" />
-        <ListView Margin="10" Name="employeesList" GridViewColumnHeader.Click="NameHeaderClickedHandler" DockPanel.Dock="Top" Height="88" SelectionChanged="employeesList_SelectionChanged">
+        <ListView Margin="10" Name="employeesList" GridViewColumnHeader.Click="NameHeaderClickedHandler" DockPanel.Dock="Top" Height="350" SelectionChanged="employeesList_SelectionChanged">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Number" Width="50" DisplayMemberBinding="{Binding Number}" />
