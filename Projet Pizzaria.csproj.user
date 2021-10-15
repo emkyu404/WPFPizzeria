@@ -16,7 +16,10 @@
     <Compile Update="Create_Order_Page.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="MenuClientEffectif.xaml.cs">
+    <Compile Update="MenuClientEmployee.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="WindowEmployee.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -33,7 +36,10 @@
     <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="MenuClientEffectif.xaml">
+    <Page Update="MenuClientEmployee.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="WindowEmployee.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

@@ -33,8 +33,8 @@ namespace Projet_Pizzaria
 
         private void Button_Client_Effectif_Click(object sender, RoutedEventArgs e)
         {
-            MenuClientEffectif mce = new MenuClientEffectif();
-            mce.Show();
+            Window wce = new MenuClientEmployee();
+            wce.Show();
         }
     }
 }

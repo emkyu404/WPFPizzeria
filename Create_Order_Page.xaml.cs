@@ -46,22 +46,22 @@ namespace Projet_Pizzaria
             QuestionBoxPnl.Visibility = Visibility.Collapsed;
         }
 
-        private void confirmRegisterClick(object sender, RoutedEventArgs e)
-        {
-            currentClient = new Client(tbName.Text, tbSurname.Text, tbPhoneNumber.Text, tbAddress.Text);
-            tbName.Text = "";
-            tbSurname.Text = "";
-            tbPhoneNumber.Text = "";
-            tbAddress.Text = "";
+        //private void confirmRegisterClick(object sender, RoutedEventArgs e)
+        //{
+        //    currentClient = new Client(tbName.Text, tbSurname.Text, tbPhoneNumber.Text, tbAddress.Text);
+        //    tbName.Text = "";
+        //    tbSurname.Text = "";
+        //    tbPhoneNumber.Text = "";
+        //    tbAddress.Text = "";
 
-            updateClientInfo();
-        }
+        //    updateClientInfo();
+        //}
 
-        private void updateClientInfo()
-        {
-            ClientAddress.Text = currentClient.getAddress();
-            ClientName.Text = currentClient.getName();
-            ClientPN.Text = currentClient.getPhoneNumber();
-        }
+        //private void updateClientInfo()
+        //{
+        //    ClientAddress.Text = currentClient.Address;
+        //    ClientName.Text = currentClient.getName();
+        //    ClientPN.Text = currentClient.getPhoneNumber();
+        //}
     }
 }

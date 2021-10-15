@@ -13,25 +13,37 @@ using System.Windows.Shapes;
 namespace Projet_Pizzaria
 {
     /// <summary>
-    /// Logique d'interaction pour MenuClientEffectif.xaml
+    /// Logique d'interaction pour MenuClientWorkforce.xaml
     /// </summary>
-    public partial class MenuClientEffectif : Window
+    public partial class MenuClientEmployee : Window
     {
-        public MenuClientEffectif()
+        public MenuClientEmployee()
         {
             InitializeComponent();
         }
 
         private void Button_Client_Click(object sender, RoutedEventArgs e)
         {
-            WindowClient wc = new WindowClient();
+            Window wc = new WindowClient();
             wc.Show();
+
+            Close();
         }
 
-        private void Button_Effectif_Click(object sender, RoutedEventArgs e)
+        private void Button_Employee_Click(object sender, RoutedEventArgs e)
         {
-            WindowEffectif we = new WindowEffectif();
-            we.Show();
+            Window ww = new WindowEmployee();
+            ww.Show();
+
+            Close();
+        }
+
+        private void Button_Return_Click(object sender, RoutedEventArgs e)
+        {
+            Window w = new MainWindow();
+            w.Show();
+
+            Close();
         }
     }
 }

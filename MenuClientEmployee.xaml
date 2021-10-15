@@ -1,0 +1,16 @@
+﻿<Window x:Class="Projet_Pizzaria.MenuClientEmployee"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Projet_Pizzaria"
+        mc:Ignorable="d"
+        Title="Menu Client Employee" Height="450" Width="800">
+    <Grid>
+        <StackPanel HorizontalAlignment="Center" Width="800" VerticalAlignment="Center" Height="163">
+            <Button Click="Button_Client_Click" Width="230" Height="45" Margin="0,0,0,20" HorizontalAlignment="Center">Module Client</Button>
+            <Button Click="Button_Employee_Click" Height="50" Width="230" Margin="0,0,0,20" HorizontalAlignment="Center">Module Effectif</Button>
+            <Button Content="Retour" Click="Button_Return_Click" Width="Auto" Margin="15,0,0,0" VerticalAlignment="Bottom" HorizontalAlignment="Left"/>
+        </StackPanel>
+    </Grid>
+</Window>

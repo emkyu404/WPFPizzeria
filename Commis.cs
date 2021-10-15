@@ -6,8 +6,13 @@ namespace Projet_Pizzaria
 {
     class Commis : Employee
     {
-        public Commis(string name)
+        public Commis(int number, string name, string surname, Address address) : base(number, name, surname, address)
         {
+
+        }
+        public string Type
+        {
+            get => "Commis";
         }
     }
 }

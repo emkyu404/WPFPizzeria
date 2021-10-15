@@ -10,13 +10,14 @@ namespace Projet_Pizzaria
         private static int numberInc = 0;
         private DateTime date;
         private string clientName;
+        private bool paid;
 
-        public Order(Client c)
-        {
-            this.number = numberInc++;
-            this.date = DateTime.Now;
-            this.clientName = c.getName();
-        }
+        //public Order(Client c)
+        //{
+        //    this.number = numberInc++;
+        //    this.date = DateTime.Now;
+        //    this.clientName = c.getName();
+        //}
 
     }
 }

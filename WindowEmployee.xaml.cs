@@ -5,29 +5,22 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Collections.ObjectModel;
-using System.Linq;
 
 namespace Projet_Pizzaria
 {
     /// <summary>
-    /// Logique d'interaction pour Client.xaml
+    /// Logique d'interaction pour WindowEffectif.xaml
     /// </summary>
-    public partial class WindowClient : Window
+    public partial class WindowEmployee : Window
     {
-        //List<Client> clients = new List<Client>();
-        ObservableCollection<Client> clients = new ObservableCollection<Client>();
-
-        public WindowClient()
+        //List<Employee> employees = new List<Employee>();
+        ObservableCollection<Employee> employees = new ObservableCollection<Employee>();
+        public WindowEmployee()
         {
             InitializeComponent();
+            employeesList.ItemsSource = employees;
 
-            foreach (Client c in Client.getRegisteredClient())
-            {
-                clients.Add(c);
-            }
-            clientsList.ItemsSource = clients;
-
-            CollectionView view = (CollectionView)CollectionViewSource.GetDefaultView(clientsList.ItemsSource);
+            CollectionView view = (CollectionView)CollectionViewSource.GetDefaultView(employeesList.ItemsSource);
             view.Filter = UserFilter;
         }
 
@@ -44,12 +37,12 @@ namespace Projet_Pizzaria
             if (String.IsNullOrEmpty(txtFilter.Text))
                 return true;
             else
-                return ((item as Client).City.IndexOf(txtFilter.Text, StringComparison.OrdinalIgnoreCase) >= 0);
+                return ((item as Employee).City.IndexOf(txtFilter.Text, StringComparison.OrdinalIgnoreCase) >= 0);
         }
 
         private void txtFilter_TextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
         {
-            CollectionViewSource.GetDefaultView(clientsList.ItemsSource).Refresh();
+            CollectionViewSource.GetDefaultView(employeesList.ItemsSource).Refresh();
         }
 
         void NameHeaderClickedHandler(object sender, RoutedEventArgs e)
@@ -89,7 +82,7 @@ namespace Projet_Pizzaria
         private void Sort(string sortBy, ListSortDirection direction)
         {
             ICollectionView dataView =
-              CollectionViewSource.GetDefaultView(clientsList.ItemsSource);
+              CollectionViewSource.GetDefaultView(employeesList.ItemsSource);
 
             dataView.SortDescriptions.Clear();
             SortDescription sd = new SortDescription(sortBy, direction);
@@ -106,9 +99,9 @@ namespace Projet_Pizzaria
 
         private void Button_Delete_Click(object sender, RoutedEventArgs e)
         {
-            Client c = (Client)clientsList.SelectedItem;
-            clients.Remove(c);
-            Client.getRegisteredClient().Remove(c);
+            Window wce = new MenuClientEmployee();
+            wce.Show();
+            Close();
         }
 
         private void Button_Add_Click(object sender, RoutedEventArgs e)

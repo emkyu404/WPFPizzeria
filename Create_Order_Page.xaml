@@ -32,7 +32,7 @@
                 <TextBox Name="tbPhoneNumber"></TextBox>
                 <Label>Adresse</Label>
                 <TextBox Name="tbAddress"></TextBox>
-                <Button Click="confirmRegisterClick">Valider</Button>
+                <!--<Button Click="confirmRegisterClick">Valider</Button>-->
             </StackPanel>
             
             <StackPanel Name="findClientPnl">

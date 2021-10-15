@@ -5,47 +5,65 @@ using System.Linq;
 
 namespace Projet_Pizzaria
 {
-    class Client
+    public class Client
     {
         private string name;
         private string surname;
         private string phoneNumber;
         private DateTime firstOrderDate;
-        private string address;
+        private Address address;
 
-        private static List<Client> RegisteredClient = new List<Client>();
-
-        public Client(string n, string sn, string pn, string adr)
+        public string Name
         {
-            this.name = n;
-            this.surname = sn;
-            this.phoneNumber = pn;
+            get => name;
+            set => name = value;
+        }
+        public string Surname
+        {
+            get => surname;
+            set => surname = value;
+        }
+        public string PhoneNumber
+        {
+            get => phoneNumber;
+            set => phoneNumber = value;
+        }
+        public DateTime firstorderdate
+        {
+            get => firstorderdate;
+        }
+        
+
+        private static List<Client> RegisteredClient = new List<Client>()
+        {
+        new Client("Antoine", "azdefzgrethr", "0114564367", new Address(66, "Rue Camille Desmoulins", 6454230, "aachan")),
+        new Client("dfghlhh", "qsdfsgd", "0616846691", new Address(896, "Rue Camille Desmoulins", 54230, "Cachan")),
+        new Client("qsdfgkjhljmk", "sfdghsd", "0547896516846691", new Address(96, "Rue Camille Desmoulins", 14230, "hachan"))
+        };
+
+        public Client(string name, string surname, string phoneNumber, Address address)
+        {
+            this.name = name;
+            this.surname = surname;
+            this.phoneNumber = phoneNumber;
             this.firstOrderDate = DateTime.Now;
-            this.address = adr;
+            this.address = address;
 
-            RegisteredClient.Add(this);
+            //RegisteredClient.Add(this);
         }
 
-        public string getName()
-        {
-            return name;
-        }
 
-        public string getPhoneNumber()
-        {
-            return phoneNumber;
-        }
+        public string Address => address.Number + " " + address.StreetName;
 
-        public string getAddress()
-        {
-            return address;
-        }
+        public int ZipCode => address.ZipCode;
 
-        public Client getClientByPhoneNumber(string pn)
-        {
-            Client c = RegisteredClient.FirstOrDefault(cl => cl.getPhoneNumber() == pn);
-            return c;
-        }
+        public string City => address.City;
+
+        //public Client getClientByPhoneNumber(string pn)
+        //{
+        //    Client c = RegisteredClient.FirstOrDefault(cl => cl.getPhoneNumber() == pn);
+        //    return c;
+        //}
 
         public static List<Client> getRegisteredClient()
         {
