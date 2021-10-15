@@ -93,10 +93,8 @@ E:\EFREI\Projet Pizzeria\WPFPizzeria\obj\Debug\netcoreapp3.1\WindowEmployee.g.cs
 E:\EFREI\Projet Pizzeria\WPFPizzeria\obj\Debug\netcoreapp3.1\Create_Order_Page.baml
 E:\EFREI\Projet Pizzeria\WPFPizzeria\obj\Debug\netcoreapp3.1\MenuClientEmployee.baml
 E:\EFREI\Projet Pizzeria\WPFPizzeria\obj\Debug\netcoreapp3.1\WindowEmployee.baml
-<<<<<<< HEAD
 E:\EFREI\Projet Pizzeria\WPFPizzeria\obj\Debug\netcoreapp3.1\AjoutItems.g.cs
 E:\EFREI\Projet Pizzeria\WPFPizzeria\obj\Debug\netcoreapp3.1\AjoutItems.baml
-=======
 C:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\obj\Debug\netcoreapp3.1\Create_Client.g.cs
 C:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\obj\Debug\netcoreapp3.1\MenuCommande.g.cs
 C:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\obj\Debug\netcoreapp3.1\Create_Client.baml

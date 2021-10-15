@@ -52,5 +52,47 @@ namespace Projet_Pizzaria {
             return result;
         }
 
+        public static PizzaSize getSizeByString(String text)
+        {
+            switch (text)
+            {
+                case "medium": return PizzaSize.medium;
+                case "huge": return  PizzaSize.huge; 
+                case "small": return PizzaSize.small;
+                default: throw new Exception();
+            }
+        }
+
+        public static PizzaType getTypeByString(String text)
+        {
+            switch (text)
+            {
+                case "Bufala": return PizzaType.Bufala;
+                case "Formaggi": return PizzaType.Formaggi;
+                case "Margharita": return PizzaType.Margharita;
+                case "Napoletana": return PizzaType.Napoletana;
+                case "Parmegiana": return PizzaType.Parmegiana;
+                case "Vegan": return PizzaType.Vegan; break;
+                default: throw new Exception();
+            }
+        }
+
+        public override String ToString()
+        {
+            return this.ptype.ToString() + " " + this.size.ToString();
+        }
+
+        public override bool Equals(object obj)
+        {
+            if ((obj == null) || !this.GetType().Equals(obj.GetType()))
+            {
+                return false;
+            }
+            else
+            {
+                Pizza p = (Pizza) obj;
+                return (p.ptype == this.ptype) && (p.size == this.size);
+            }
+        }
     }
 }

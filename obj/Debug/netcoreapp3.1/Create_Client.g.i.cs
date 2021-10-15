@@ -133,7 +133,7 @@ namespace Projet_Pizzaria {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Projet Pizzaria;V1.0.0.0;component/create_client.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Projet Pizzaria;component/create_client.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\Create_Client.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
