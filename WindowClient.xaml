@@ -9,8 +9,8 @@
         >
     <DockPanel Margin="10">
         <Label Content="Recherche par ville : " Width="200" DockPanel.Dock="Top" HorizontalAlignment="Left" Margin="10,0,0,0" Height="31" VerticalAlignment="Top"/>
-        <TextBox DockPanel.Dock="Top" Margin="11,0,0,10" Name="txtFilter" TextChanged="txtFilter_TextChanged" Width="200" VerticalAlignment="Stretch" VerticalContentAlignment="Top" HorizontalAlignment="Left" />
-        <ListView Margin="10" Name="clientsList" GridViewColumnHeader.Click="NameHeaderClickedHandler" DockPanel.Dock="Top" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+        <TextBox DockPanel.Dock="Top" Margin="10,0,0,10" Name="txtFilter" TextChanged="txtFilter_TextChanged" Width="200" VerticalAlignment="Stretch" VerticalContentAlignment="Top" HorizontalAlignment="Left" />
+        <ListView Margin="10" Name="clientsList" GridViewColumnHeader.Click="NameHeaderClickedHandler" DockPanel.Dock="Top" SelectionChanged="clientsList_SelectionChanged" Height="121">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Name" Width="120" DisplayMemberBinding="{Binding Name}" />
@@ -22,9 +22,24 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <StackPanel Orientation="Horizontal">
+        <StackPanel Orientation="Horizontal" DockPanel.Dock="Top" VerticalAlignment="Bottom" Margin="10,0,10,0">
+            <Label>Name</Label>
+            <TextBox Name="TextBoxName" Width="100" Height="20"></TextBox>
+            <Label>Surname</Label>
+            <TextBox Name="TextBoxSurname" Width="100" Height="20"></TextBox>
+            <Label>Phone Number</Label>
+            <TextBox Name="TextBoxPhoneNumber" Width="80" Height="20"></TextBox>
+            <Label>Address</Label>
+            <TextBox Name="TextBoxAddress" Width="250" Height="20"></TextBox>
+            <Label>Zip Code</Label>
+            <TextBox Name="TextBoxZipCode" Width="60" Height="20"></TextBox>
+            <Label>City</Label>
+            <TextBox Name="TextBoxCity" Width="150" Height="20"></TextBox>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="0,0,0,0">
             <Button Content="Retour" Click="Button_Return_Click" Width="Auto" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Bottom" />
-            <Button Content="Supprimer" Click="Button_Delete_Click" Width="Auto" HorizontalAlignment="Right" Margin="760,0,0,0" VerticalAlignment="Bottom" />
+            <Button Content="Supprimer" Click="Button_Delete_Click" Width="Auto" HorizontalAlignment="Right" Margin="860,0,0,0" VerticalAlignment="Bottom" />
+            <Button Content="Modifier" Click="Button_Update_Click" Width="Auto" HorizontalAlignment="Right" Margin="10,0,0,0" VerticalAlignment="Bottom" />
             <Button Content="Ajouter" Click="Button_Add_Click" Width="Auto" HorizontalAlignment="Right" Margin="10,0,0,0" VerticalAlignment="Bottom" />
         </StackPanel>
     </DockPanel>
