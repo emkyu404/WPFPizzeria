@@ -7,13 +7,13 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="Create_Client.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="MenuCommande.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="WindowClient.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="Commande.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="Create_Order_Page.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="MenuClientEffectif.xaml.cs">
@@ -21,13 +21,13 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="Create_Client.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MenuCommande.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="WindowClient.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Commande.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Create_Order_Page.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">
