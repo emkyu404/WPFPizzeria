@@ -23,9 +23,9 @@
             </ListView.View>
         </ListView>
         <StackPanel Orientation="Horizontal">
-            <Button Content="Retour" Click="Button_Return_Click" Width="Auto" HorizontalAlignment="Left" Margin="10,0,0,0" />
-            <Button Content="Supprimer" Click="Button_Delete_Click" Width="Auto" HorizontalAlignment="Right" Margin="760,0,0,0" />
-            <Button Content="Ajouter" Click="Button_Add_Click" Width="Auto" HorizontalAlignment="Right" Margin="10,0,0,0" />
+            <Button Content="Retour" Click="Button_Return_Click" Width="Auto" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Bottom" />
+            <Button Content="Supprimer" Click="Button_Delete_Click" Width="Auto" HorizontalAlignment="Right" Margin="760,0,0,0" VerticalAlignment="Bottom" />
+            <Button Content="Ajouter" Click="Button_Add_Click" Width="Auto" HorizontalAlignment="Right" Margin="10,0,0,0" VerticalAlignment="Bottom" />
         </StackPanel>
     </DockPanel>
 </Window>
