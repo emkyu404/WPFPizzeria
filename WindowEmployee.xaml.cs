@@ -111,11 +111,63 @@ namespace Projet_Pizzaria
             MessageBox.Show("Employé supprimé");
         }
 
+        private void Button_Update_Click(object sender, RoutedEventArgs e)
+        {
+            int index = employeesList.SelectedIndex;
+            string address = TextBoxAddress.Text;
+
+            var firstSpaceIndex = address.IndexOf(" ");
+            int number = Int32.Parse(address.Substring(0, firstSpaceIndex));
+            string streetName = address.Substring(firstSpaceIndex + 1);
+            int zipCode = Int32.Parse(TextBoxZipCode.Text);
+
+            string type = employeesList.SelectedItem.GetType().ToString();
+
+            Employee selectedEmployee;
+
+            if (type.Equals("Projet_Pizzaria.Commis"))
+            {
+                selectedEmployee = new Commis(Int32.Parse(TextBoxNumber.Text), TextBoxName.Text, TextBoxSurname.Text, new Address(number, streetName, zipCode, TextBoxCity.Text));
+            }
+            else
+            {
+                selectedEmployee = new DeliveryMan(Int32.Parse(TextBoxNumber.Text), TextBoxName.Text, TextBoxSurname.Text, new Address(number, streetName, zipCode, TextBoxCity.Text));
+            }
+            
+            employees.RemoveAt(index);
+            employees.Insert(index, selectedEmployee);
+            Employee.getRegisteredEmployees().RemoveAt(index);
+
+            TextBoxNumber.Clear();
+            TextBoxName.Clear();
+            TextBoxSurname.Clear();
+            TextBoxAddress.Clear();
+            TextBoxZipCode.Clear();
+            TextBoxCity.Clear();
+        }
+
         private void Button_Add_Click(object sender, RoutedEventArgs e)
         {
             Window wce = new MenuClientEmployee();
             wce.Show();
             Close();
+        }
+
+        private void employeesList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Employee selectedEmployee = (Employee)employeesList.SelectedItem;
+            try { 
+                if (selectedEmployee != null)
+                {
+                    TextBoxNumber.Text = selectedEmployee.Number.ToString();
+                    TextBoxName.Text = selectedEmployee.Name;
+                    TextBoxSurname.Text = selectedEmployee.Surname;
+                    TextBoxAddress.Text = selectedEmployee.Address;
+                    TextBoxZipCode.Text = selectedEmployee.ZipCode.ToString();
+                    TextBoxCity.Text = selectedEmployee.City;
+                }
+            }
+            catch { }
         }
     }
 }

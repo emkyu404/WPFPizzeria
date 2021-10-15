@@ -100,3 +100,5 @@ C:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\obj\Debug\netcoreapp3.1\Menu
 C:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\obj\Debug\netcoreapp3.1\Create_Client.baml
 C:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\obj\Debug\netcoreapp3.1\MenuCommande.baml
 >>>>>>> fdeeccd1a4987fe5ff39c77bd463e5b475c3190d
+C:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\obj\Debug\netcoreapp3.1\AjoutItems.g.cs
+C:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\obj\Debug\netcoreapp3.1\AjoutItems.baml

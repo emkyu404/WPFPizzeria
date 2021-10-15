@@ -9,7 +9,11 @@ Projet_Pizzaria
 none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
+<<<<<<< HEAD
 E:\EFREI\Projet Pizzeria\WPFPizzeria\App.xaml
+=======
+C:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\App.xaml
+>>>>>>> 30ea7c6b9887af1c8ab86f39fa5886fc2a95df56
 81205376790
 
 20-1049520654

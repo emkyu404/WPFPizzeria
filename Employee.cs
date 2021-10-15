@@ -27,12 +27,12 @@ namespace Projet_Pizzaria
             set => surname = value;
         }
 
-        private static List<Employee> RegisteredEmployees = new List<Employee>()
-        {
+        private static List<Employee> RegisteredEmployees = new List<Employee>();
+        /*{
         new Commis(1, "Antoine", "CHENG", new Address(66, "Rue Camille Desmoulins", 6454230, "Cachan")),
         new Commis(2, "aezegtrh", "retgrhyte", new Address(98, "Rue Camille Desmoulins", 6454230, "aachan")),
         new DeliveryMan(1, "thegz", "sfd", new Address(1, "Rue Camille Desmoulins", 6454230, "Bachan"))
-        };
+        };*/
         
 
         public Employee(int number, string name, string surname, Address address)

@@ -111,12 +111,53 @@ namespace Projet_Pizzaria
             Client.getRegisteredClient().Remove(c);
             MessageBox.Show("Client supprimé");
         }
+        private void Button_Update_Click(object sender, EventArgs e)
+        {
+            int index = clientsList.SelectedIndex;
+            string address = TextBoxAddress.Text;
+
+            var firstSpaceIndex = address.IndexOf(" ");
+            int number = Int32.Parse(address.Substring(0, firstSpaceIndex)); 
+            string streetName = address.Substring(firstSpaceIndex + 1);
+            int zipCode = Int32.Parse(TextBoxZipCode.Text);
+
+            Client selectedClient = new Client(TextBoxName.Text, TextBoxSurname.Text, TextBoxPhoneNumber.Text, new Address(number, streetName, zipCode, TextBoxCity.Text));
+            clients.RemoveAt(index);
+            clients.Insert(index, selectedClient);
+            Client.getRegisteredClient().RemoveAt(index);
+
+            TextBoxName.Clear();
+            TextBoxSurname.Clear();
+            TextBoxPhoneNumber.Clear();
+            TextBoxAddress.Clear();
+            TextBoxZipCode.Clear();
+            TextBoxCity.Clear();
+        }
 
         private void Button_Add_Click(object sender, RoutedEventArgs e)
         {
             Window wce = new MenuClientEmployee();
             wce.Show();
             Close();
+        }
+
+        private void clientsList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            try
+            {
+                Client selectedClient = (Client)clientsList.SelectedItem;
+                if (selectedClient != null)
+                {
+                    TextBoxName.Text = selectedClient.Name.ToString();
+                    TextBoxSurname.Text = selectedClient.Surname.ToString();
+                    TextBoxPhoneNumber.Text = selectedClient.PhoneNumber.ToString();
+                    TextBoxAddress.Text = selectedClient.Address.ToString();
+                    TextBoxZipCode.Text = selectedClient.ZipCode.ToString();
+                    TextBoxCity.Text = selectedClient.City.ToString();
+                }
+                
+            }
+            catch { }
         }
     }
 }
