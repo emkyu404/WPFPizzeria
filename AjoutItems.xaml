@@ -1,0 +1,50 @@
+﻿<Window x:Class="Projet_Pizzaria.AjoutItems"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Projet_Pizzaria"
+        mc:Ignorable="d"
+        Title="AjoutItems" Height="450" Width="800">
+    <Grid>
+        <Border BorderThickness="1" BorderBrush="Black" HorizontalAlignment="Left" Height="170" Margin="50,62,0,0" VerticalAlignment="Top" Width="392" Background="#FFDEDEDE">
+            <ComboBox HorizontalAlignment="Left" Height="17" Margin="161,181,0,0" VerticalAlignment="Top" Width="163"/>
+        </Border>
+        <Border BorderThickness="1" BorderBrush="Black" HorizontalAlignment="Left" Height="323" Margin="464,62,0,0" VerticalAlignment="Top" Width="280" Background="#FFDEDEDE">
+            <TextBlock HorizontalAlignment="Center" Height="263" Margin="0,9,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" Width="260" Background="White"/>
+        </Border>
+        <Label Content="Ajouter une Pizza" HorizontalAlignment="Left" Margin="50,31,0,0" VerticalAlignment="Top"/>
+        <Label Content="Type de la pizza" HorizontalAlignment="Left" Margin="88,69,0,0" VerticalAlignment="Top"/>
+        <Label Content="Taille de la pizza" HorizontalAlignment="Left" Margin="288,69,0,0" VerticalAlignment="Top"/>
+        <Label Content="" HorizontalAlignment="Left" Margin="66,80,0,0" VerticalAlignment="Top"/>
+        <ComboBox HorizontalAlignment="Left" Margin="81,105,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBoxItem Content="Margharita"></ComboBoxItem>
+            <ComboBoxItem Content="Napoletana"></ComboBoxItem>
+            <ComboBoxItem Content="Bufala"></ComboBoxItem>
+            <ComboBoxItem Content="Vegan"></ComboBoxItem>
+            <ComboBoxItem Content="Parmegiana"></ComboBoxItem>
+            <ComboBoxItem Content="Formaggi"></ComboBoxItem>
+        </ComboBox>
+        <ComboBox HorizontalAlignment="Left" Margin="276,105,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBoxItem Content="huge"></ComboBoxItem>
+            <ComboBoxItem Content="medium"></ComboBoxItem>
+            <ComboBoxItem Content="small"></ComboBoxItem>
+        </ComboBox>
+        <Button Content="Ajouter" HorizontalAlignment="Left" Margin="276,159,0,0" VerticalAlignment="Top" Click="Button_Click" RenderTransformOrigin="0.852,-0.307" Height="24" Width="124"/>
+        <Button Content="Confirmer la liste" HorizontalAlignment="Left" Margin="612,348,0,0" VerticalAlignment="Top" Click="Button_Click" RenderTransformOrigin="0.852,-0.307" Height="24" Width="124"/>
+        <Button Content="Reset" HorizontalAlignment="Left" Margin="472,348,0,0" VerticalAlignment="Top" Click="Button_Click" RenderTransformOrigin="0.852,-0.307" Height="24" Width="124"/>
+        <Border BorderThickness="1" BorderBrush="Black" HorizontalAlignment="Left" Height="98" Margin="50,290,0,0" VerticalAlignment="Top" Width="392" Background="#FFDEDEDE">
+        </Border>
+        <Label Content="Ajouter une boisson" HorizontalAlignment="Left" Margin="50,259,0,0" VerticalAlignment="Top"/>
+        <Label Content="Type de la boisson" HorizontalAlignment="Left" Margin="82,304,0,0" VerticalAlignment="Top" Width="113"/>
+        <ComboBox HorizontalAlignment="Left" Margin="75,340,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBoxItem Content="juice"></ComboBoxItem>
+            <ComboBoxItem Content="coke"></ComboBoxItem>
+            <ComboBoxItem Content="lemonade"></ComboBoxItem>
+            <ComboBoxItem Content="beer"></ComboBoxItem>
+            <ComboBoxItem Content="icetea"></ComboBoxItem>
+        </ComboBox>
+        <Button Content="Ajouter" HorizontalAlignment="Left" Margin="272,340,0,0" VerticalAlignment="Top" Click="Button_Click" RenderTransformOrigin="0.852,-0.307" Height="24" Width="124"/>
+        <Label Content="Etat de la commande actuelle" HorizontalAlignment="Left" Margin="464,31,0,0" VerticalAlignment="Top"/>
+    </Grid>
+</Window>

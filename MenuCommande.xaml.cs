@@ -17,6 +17,7 @@ namespace Projet_Pizzaria
     /// </summary>
     public partial class MenuCommande : Window
     {
+        private Client currentClient;
         public MenuCommande()
         {
             InitializeComponent();
@@ -36,6 +37,29 @@ namespace Projet_Pizzaria
         {
             Create_Client cc = new Create_Client();
             cc.Show();
+        }
+
+        private void TelTextBox_LostFocus(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                Client c = Client.getClientByPhoneNumber(TelTextBox.Text);
+                if (c == null) throw new Exception();
+
+                currentClient = c;
+                ClientNameLabel.Content = currentClient.Surname + " " +currentClient.Name;
+
+            }catch(Exception ex)
+            {
+                MessageBox.Show("Aucun client enregistré ne correspond au numéro de téléphone");
+                TelTextBox.Text = "";
+            }
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            AjoutItems ai = new AjoutItems();
+            ai.Show();
         }
     }
 }
