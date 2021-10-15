@@ -1,0 +1,29 @@
+﻿<Window x:Class="Projet_Pizzaria.Create_Client"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Projet_Pizzaria"
+        mc:Ignorable="d"
+        Title="Create_Client" Height="450" Width="800">
+    <Grid>
+
+        <Canvas x:Name="ConfirmButtonTextBox" HorizontalAlignment="Center" Height="305" VerticalAlignment="Center" Width="656" Background="#FFF1F1F1">
+            <Label Content="Nom du client" Height="28" Canvas.Left="32" Canvas.Top="34" Width="104"/>
+            <Label Content="Prénom du client" Height="28" Canvas.Left="32" Canvas.Top="67" Width="104"/>
+            <Label Content="N° de téléphone" Height="28" Canvas.Left="32" Canvas.Top="100" Width="104"/>
+            <Label Content="Adresse" Height="28" Canvas.Left="32" Canvas.Top="128" Width="104"/>
+            <Grid x:Name="TextBoxGrid" Height="107" Canvas.Left="158" Canvas.Top="39" Width="350">
+                <TextBox x:Name="NameTextBox" TextWrapping="Wrap" Margin="0,0,230,89"/>
+                <TextBox x:Name="SurnameTextBox" TextWrapping="Wrap" Margin="0,33,230,56"/>
+                <TextBox x:Name="TelTextBox" TextWrapping="Wrap" Margin="0,61,230,28"/>
+                <TextBox x:Name="AdressTextBox" TextWrapping="Wrap" Margin="0,89,0,0"/>
+            </Grid>
+            <Button x:Name="CancelButton" Content="Annuler" Canvas.Left="305" Canvas.Top="233" Click="CancelButton_Click" Height="42" Width="140"/>
+            <StackPanel Height="122" Canvas.Left="147" Canvas.Top="34" Width="396"/>
+            <Button Content="Créer un nouveau client" Height="42" Canvas.Left="470" Canvas.Top="233" Width="156" Click="Button_Click"/>
+        </Canvas>
+        <Label Content="Création d'un nouveau client" HorizontalAlignment="Center" Margin="0,22,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>

@@ -50,7 +50,40 @@ C:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\obj\Debug\netcoreapp3.1\Comm
 C:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\obj\Debug\netcoreapp3.1\Create_Order_Page.baml
 C:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\obj\Debug\netcoreapp3.1\WindowClient.g.cs
 C:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\obj\Debug\netcoreapp3.1\WindowClient.baml
+<<<<<<< HEAD
 C:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\obj\Debug\netcoreapp3.1\MenuClientEmployee.g.cs
 C:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\obj\Debug\netcoreapp3.1\WindowEmployee.g.cs
 C:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\obj\Debug\netcoreapp3.1\MenuClientEmployee.baml
 C:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\obj\Debug\netcoreapp3.1\WindowEmployee.baml
+=======
+E:\EFREI\Projet Pizzeria\WPFPizzeria\bin\Debug\netcoreapp3.1\Projet Pizzaria.exe
+E:\EFREI\Projet Pizzeria\WPFPizzeria\bin\Debug\netcoreapp3.1\Projet Pizzaria.deps.json
+E:\EFREI\Projet Pizzeria\WPFPizzeria\bin\Debug\netcoreapp3.1\Projet Pizzaria.runtimeconfig.json
+E:\EFREI\Projet Pizzeria\WPFPizzeria\bin\Debug\netcoreapp3.1\Projet Pizzaria.runtimeconfig.dev.json
+E:\EFREI\Projet Pizzeria\WPFPizzeria\bin\Debug\netcoreapp3.1\Projet Pizzaria.dll
+E:\EFREI\Projet Pizzeria\WPFPizzeria\bin\Debug\netcoreapp3.1\Projet Pizzaria.pdb
+E:\EFREI\Projet Pizzeria\WPFPizzeria\obj\Debug\netcoreapp3.1\Projet Pizzaria.csproj.AssemblyReference.cache
+E:\EFREI\Projet Pizzeria\WPFPizzeria\obj\Debug\netcoreapp3.1\Create_Client.g.cs
+E:\EFREI\Projet Pizzeria\WPFPizzeria\obj\Debug\netcoreapp3.1\MainWindow.g.cs
+E:\EFREI\Projet Pizzeria\WPFPizzeria\obj\Debug\netcoreapp3.1\MenuClientEffectif.g.cs
+E:\EFREI\Projet Pizzeria\WPFPizzeria\obj\Debug\netcoreapp3.1\MenuCommande.g.cs
+E:\EFREI\Projet Pizzeria\WPFPizzeria\obj\Debug\netcoreapp3.1\WindowClient.g.cs
+E:\EFREI\Projet Pizzeria\WPFPizzeria\obj\Debug\netcoreapp3.1\WindowEffectif.g.cs
+E:\EFREI\Projet Pizzeria\WPFPizzeria\obj\Debug\netcoreapp3.1\App.g.cs
+E:\EFREI\Projet Pizzeria\WPFPizzeria\obj\Debug\netcoreapp3.1\Projet Pizzaria_MarkupCompile.cache
+E:\EFREI\Projet Pizzeria\WPFPizzeria\obj\Debug\netcoreapp3.1\Projet Pizzaria_MarkupCompile.lref
+E:\EFREI\Projet Pizzeria\WPFPizzeria\obj\Debug\netcoreapp3.1\Create_Client.baml
+E:\EFREI\Projet Pizzeria\WPFPizzeria\obj\Debug\netcoreapp3.1\MainWindow.baml
+E:\EFREI\Projet Pizzeria\WPFPizzeria\obj\Debug\netcoreapp3.1\MenuClientEffectif.baml
+E:\EFREI\Projet Pizzeria\WPFPizzeria\obj\Debug\netcoreapp3.1\MenuCommande.baml
+E:\EFREI\Projet Pizzeria\WPFPizzeria\obj\Debug\netcoreapp3.1\WindowClient.baml
+E:\EFREI\Projet Pizzeria\WPFPizzeria\obj\Debug\netcoreapp3.1\WindowEffectif.baml
+E:\EFREI\Projet Pizzeria\WPFPizzeria\obj\Debug\netcoreapp3.1\Projet Pizzaria.g.resources
+E:\EFREI\Projet Pizzeria\WPFPizzeria\obj\Debug\netcoreapp3.1\Projet Pizzaria.GeneratedMSBuildEditorConfig.editorconfig
+E:\EFREI\Projet Pizzeria\WPFPizzeria\obj\Debug\netcoreapp3.1\Projet Pizzaria.AssemblyInfoInputs.cache
+E:\EFREI\Projet Pizzeria\WPFPizzeria\obj\Debug\netcoreapp3.1\Projet Pizzaria.AssemblyInfo.cs
+E:\EFREI\Projet Pizzeria\WPFPizzeria\obj\Debug\netcoreapp3.1\Projet Pizzaria.csproj.CoreCompileInputs.cache
+E:\EFREI\Projet Pizzeria\WPFPizzeria\obj\Debug\netcoreapp3.1\Projet Pizzaria.dll
+E:\EFREI\Projet Pizzeria\WPFPizzeria\obj\Debug\netcoreapp3.1\Projet Pizzaria.pdb
+E:\EFREI\Projet Pizzeria\WPFPizzeria\obj\Debug\netcoreapp3.1\Projet Pizzaria.genruntimeconfig.cache
+>>>>>>> 7bbff14b2ba9f445ec3f6e7cd7e154fa5274a4a3

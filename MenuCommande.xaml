@@ -1,0 +1,18 @@
+﻿<Window x:Class="Projet_Pizzaria.MenuCommande"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Projet_Pizzaria"
+        mc:Ignorable="d"
+        Title="MenuCommande" Height="450" Width="800">
+    <Grid>
+        <Label Content="Création d'une commande&#xD;&#xA;" HorizontalAlignment="Center" Margin="0,29,0,0" VerticalAlignment="Top" Width="151" Height="26"/>
+        <Canvas HorizontalAlignment="Center" Height="325" Margin="0,60,0,0" VerticalAlignment="Top" Width="716" Background="#FFEEEEEE">
+            <Label Content="Numéro de téléphone du client" Height="25" Canvas.Left="51" Canvas.Top="35" Width="179"/>
+            <TextBox x:Name="TelTextBox" Canvas.Left="238" Canvas.Top="39" Text="TextBox" TextWrapping="Wrap" Width="120"/>
+            <Button Content="Nouveau client" Height="21" Canvas.Left="379" Canvas.Top="39" Width="96" Click="Button_Click"/>
+        </Canvas>
+
+    </Grid>
+</Window>
