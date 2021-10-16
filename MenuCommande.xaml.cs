@@ -105,6 +105,10 @@ namespace Projet_Pizzaria
                 {
                     MessageBox.Show("La commande est vide, veuiller ajouter des items");
                 }
+                else if (!OrderContainsPizza())
+                {
+                    MessageBox.Show("La commande ne contient pas de pizza");
+                }
                 else
                 {
                     Order od = new Order(currentClient, currentItemList);
@@ -115,6 +119,18 @@ namespace Projet_Pizzaria
             {
                 MessageBox.Show("Une erreur est survenu, vérifier qu'un Client a été affecté à la commande");
             }
+        }
+
+        private bool OrderContainsPizza()
+        {
+            foreach(Item i in currentItemList)
+            {
+                if(i.getType() == "Pizza")
+                {
+                    return true;
+                }
+            }
+            return false;
         }
         
         private void CancelButton_Click(object sender, RoutedEventArgs e)

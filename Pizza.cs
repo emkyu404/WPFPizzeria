@@ -94,5 +94,10 @@ namespace Projet_Pizzaria {
                 return (p.ptype == this.ptype) && (p.size == this.size);
             }
         }
+
+        public override string getType()
+        {
+            return "Pizza";
+        }
     }
 }

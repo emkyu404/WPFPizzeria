@@ -16,6 +16,7 @@ namespace Projet_Pizzaria
         public override abstract String ToString();
         public override abstract bool Equals(object obj);
 
+        public abstract String getType();
         public float getPrice()
         {
             return this.price;

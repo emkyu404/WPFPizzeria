@@ -65,5 +65,10 @@ namespace Projet_Pizzaria
             }
         }
 
+        public override string getType()
+        {
+            return "Drink";
+        }
+
     }
 }
