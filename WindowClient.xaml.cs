@@ -106,31 +106,59 @@ namespace Projet_Pizzaria
 
         private void Button_Delete_Click(object sender, RoutedEventArgs e)
         {
-            Client c = (Client)clientsList.SelectedItem;
-            clients.Remove(c);
-            Client.getRegisteredClient().Remove(c);
-            resetTextBox();
-            MessageBox.Show("Client supprimé");
+            if (clientsList.SelectedItem != null)
+            {
+                Client c = (Client)clientsList.SelectedItem;
+                clients.Remove(c);
+                Client.getRegisteredClient().Remove(c);
+                resetTextBoxes();
+                MessageBox.Show("Client supprimé");
+            }
+            else
+            {
+                MessageBox.Show("Sélectionner un client");
+            }
         }
         private void Button_Update_Click(object sender, EventArgs e)
         {
-            int index = clientsList.SelectedIndex;
-            string address = TextBoxAddress.Text;
+            if (clientsList.SelectedItem != null)
+            {
+                int index = clientsList.SelectedIndex;
+                Client selectedClient = createClient();
+                clients.RemoveAt(index);
+                clients.Insert(index, selectedClient);
+                Client.getRegisteredClient().RemoveAt(index);
 
-            var firstSpaceIndex = address.IndexOf(" ");
-            int number = Int32.Parse(address.Substring(0, firstSpaceIndex)); 
-            string streetName = address.Substring(firstSpaceIndex + 1);
-            int zipCode = Int32.Parse(TextBoxZipCode.Text);
-
-            Client selectedClient = new Client(TextBoxName.Text, TextBoxSurname.Text, TextBoxPhoneNumber.Text, new Address(number, streetName, zipCode, TextBoxCity.Text));
-            clients.RemoveAt(index);
-            clients.Insert(index, selectedClient);
-            Client.getRegisteredClient().RemoveAt(index);
-
-            resetTextBox();
+                resetTextBoxes();
+            }
+            else
+            {
+                MessageBox.Show("Sélectionner un client");
+            }
         }
 
-        private void resetTextBox()
+        private Client createClient()
+        {
+            try
+            {
+                string address = TextBoxAddress.Text;
+
+                var firstSpaceIndex = address.IndexOf(" ");
+                int number = Int32.Parse(address.Substring(0, firstSpaceIndex));
+                string streetName = address.Substring(firstSpaceIndex + 1);
+                int zipCode = Int32.Parse(TextBoxZipCode.Text);
+
+                return new Client(TextBoxName.Text, TextBoxSurname.Text, TextBoxPhoneNumber.Text, new Address(number, streetName, zipCode, TextBoxCity.Text));
+
+            }
+            catch
+            {
+                MessageBox.Show("Les champs sont mal remplis");
+                return null;
+            }
+        }
+
+        private void resetTextBoxes()
         {
             TextBoxName.Clear();
             TextBoxSurname.Clear();
@@ -142,9 +170,20 @@ namespace Projet_Pizzaria
 
         private void Button_Add_Click(object sender, RoutedEventArgs e)
         {
-            Window wce = new Create_Client();
-            wce.Show();
-            Close();
+            if(clientsList.SelectedItem == null)
+            {
+                if(TextBoxName.Text != "" && TextBoxSurname.Text != "" && TextBoxPhoneNumber.Text != "" && TextBoxAddress.Text != "" &&
+                    TextBoxZipCode.Text != "" && TextBoxCity.Text != "")
+                {
+                    Client newClient = createClient();
+                    clients.Add(newClient);
+                    resetTextBoxes();
+                }
+                else
+                {
+                    MessageBox.Show("Les champs sont mal remplis");
+                }
+            }
         }
 
         private void clientsList_SelectionChanged(object sender, SelectionChangedEventArgs e)

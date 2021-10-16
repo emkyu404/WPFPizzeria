@@ -105,39 +105,61 @@ namespace Projet_Pizzaria
 
         private void Button_Delete_Click(object sender, RoutedEventArgs e)
         {
-            Employee emp = (Employee)employeesList.SelectedItem;
-            employees.Remove(emp);
-            Employee.getRegisteredEmployees().Remove(emp);
-            MessageBox.Show("Employé supprimé");
+            if(employeesList.SelectedItem != null)
+            {
+                Employee emp = (Employee)employeesList.SelectedItem;
+                employees.Remove(emp);
+                Employee.getRegisteredEmployees().Remove(emp);
+                resetTextBoxes();
+                MessageBox.Show("Employé supprimé");
+            }
+            else
+            {
+                MessageBox.Show("Sélectionner un employé");
+            }
         }
 
         private void Button_Update_Click(object sender, RoutedEventArgs e)
         {
-            int index = employeesList.SelectedIndex;
-            string address = TextBoxAddress.Text;
-
-            var firstSpaceIndex = address.IndexOf(" ");
-            int number = Int32.Parse(address.Substring(0, firstSpaceIndex));
-            string streetName = address.Substring(firstSpaceIndex + 1);
-            int zipCode = Int32.Parse(TextBoxZipCode.Text);
-
-            string type = employeesList.SelectedItem.GetType().ToString();
-
-            Employee selectedEmployee;
-
-            if (type.Equals("Projet_Pizzaria.Commis"))
+            if (employeesList.SelectedItem != null)
             {
-                selectedEmployee = new Commis(TextBoxName.Text, TextBoxSurname.Text, new Address(number, streetName, zipCode, TextBoxCity.Text));
+                if (TextBoxName.Text != "" && TextBoxSurname.Text != "" && TextBoxAddress.Text != "" && TextBoxZipCode.Text != "" && TextBoxCity.Text != "")
+                {
+                    int index = employeesList.SelectedIndex;
+
+                    Employee selectedEmployee = (Employee) employeesList.SelectedItem;
+
+                    string address = TextBoxAddress.Text;
+
+                    var firstSpaceIndex = address.IndexOf(" ");
+                    int number = Int32.Parse(address.Substring(0, firstSpaceIndex));
+                    string streetName = address.Substring(firstSpaceIndex + 1);
+                    int zipCode = Int32.Parse(TextBoxZipCode.Text);
+
+                    string type = employeesList.SelectedItem.GetType().ToString();
+
+                    if (type.Equals("Projet_Pizzaria.Commis"))
+                    {
+                        new Commis(TextBoxName.Text, TextBoxSurname.Text, new Address(number, streetName, zipCode, TextBoxCity.Text));
+                    }
+                    else
+                    {
+                        new DeliveryMan(TextBoxName.Text, TextBoxSurname.Text, new Address(number, streetName, zipCode, TextBoxCity.Text));
+                    }
+                    employees.RemoveAt(index);
+                    employees.Insert(index, selectedEmployee);
+                    Employee.getRegisteredEmployees().RemoveAt(index);
+                    resetTextBoxes();
+                }
             }
             else
             {
-                selectedEmployee = new DeliveryMan(TextBoxName.Text, TextBoxSurname.Text, new Address(number, streetName, zipCode, TextBoxCity.Text));
+                MessageBox.Show("Sélectionner un employé");
             }
-            
-            employees.RemoveAt(index);
-            employees.Insert(index, selectedEmployee);
-            Employee.getRegisteredEmployees().RemoveAt(index);
+        }
 
+        private void resetTextBoxes()
+        {
             TextBoxNumber.Clear();
             TextBoxName.Clear();
             TextBoxSurname.Clear();
@@ -148,9 +170,7 @@ namespace Projet_Pizzaria
 
         private void Button_Add_Click(object sender, RoutedEventArgs e)
         {
-            Window wce = new MenuClientEmployee();
-            wce.Show();
-            Close();
+            
         }
 
         private void employeesList_SelectionChanged(object sender, SelectionChangedEventArgs e)
