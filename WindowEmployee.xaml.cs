@@ -127,11 +127,11 @@ namespace Projet_Pizzaria
 
             if (type.Equals("Projet_Pizzaria.Commis"))
             {
-                selectedEmployee = new Commis(Int32.Parse(TextBoxNumber.Text), TextBoxName.Text, TextBoxSurname.Text, new Address(number, streetName, zipCode, TextBoxCity.Text));
+                selectedEmployee = new Commis(TextBoxName.Text, TextBoxSurname.Text, new Address(number, streetName, zipCode, TextBoxCity.Text));
             }
             else
             {
-                selectedEmployee = new DeliveryMan(Int32.Parse(TextBoxNumber.Text), TextBoxName.Text, TextBoxSurname.Text, new Address(number, streetName, zipCode, TextBoxCity.Text));
+                selectedEmployee = new DeliveryMan(TextBoxName.Text, TextBoxSurname.Text, new Address(number, streetName, zipCode, TextBoxCity.Text));
             }
             
             employees.RemoveAt(index);
