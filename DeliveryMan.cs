@@ -6,9 +6,9 @@ namespace Projet_Pizzaria
 {
     class DeliveryMan : Employee
     {
-        public DeliveryMan(int number, string name, string surname, Address address) : base(number, name, surname, address)
+        public DeliveryMan(string name, string surname, Address address) : base(name, surname, address)
         {
-            Employee.getRegisteredEmployees().Add(this);
+            Employee.RegisteredEmployees.Add(this.Number, this);
         }
 
         public string Type

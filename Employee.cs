@@ -11,6 +11,10 @@ namespace Projet_Pizzaria
         private string surname;
         private Address address;
 
+        public static int numInc = 0;
+
+        private List<Order> orders;
+
         public int Number
         {
             get => number;
@@ -27,7 +31,7 @@ namespace Projet_Pizzaria
             set => surname = value;
         }
 
-        private static List<Employee> RegisteredEmployees = new List<Employee>();
+        public static Dictionary<int,Employee> RegisteredEmployees = new Dictionary<int,Employee>();
         /*{
         new Commis(1, "Antoine", "CHENG", new Address(66, "Rue Camille Desmoulins", 6454230, "Cachan")),
         new Commis(2, "aezegtrh", "retgrhyte", new Address(98, "Rue Camille Desmoulins", 6454230, "aachan")),
@@ -35,12 +39,13 @@ namespace Projet_Pizzaria
         };*/
         
 
-        public Employee(int number, string name, string surname, Address address)
+        public Employee(string name, string surname, Address address)
         {
-            this.number = number;
+            this.number = ++numInc;
             this.name = name;
             this.surname = surname; 
             this.address = address;
+            this.orders = new List<Order>();
         }
 
         public string Address => address.Number + " " + address.StreetName;
@@ -51,7 +56,12 @@ namespace Projet_Pizzaria
 
         public static List<Employee> getRegisteredEmployees()
         {
-            return RegisteredEmployees;
+            List<Employee> newList = new List<Employee>();
+            foreach(KeyValuePair<int, Employee> emp in RegisteredEmployees)
+            {
+                newList.Add(emp.Value);
+            }
+            return newList;
         }
 
         public int getNumber()

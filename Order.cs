@@ -58,6 +58,25 @@ namespace Projet_Pizzaria
             }
             return result;
         }
+
+        public string getClientName()
+        {
+            return clientName;
+        }
+
+        // faiblesse : Les clients ne peuvent pas porter le même nom
+        public List<Order> getallOrderByClient(Client c)
+        {
+            List<Order> newList = new List<Order>();
+            foreach(KeyValuePair<int,Order> order in Order.OrderList)
+            {
+                if(order.Value.getClientName() == c.Name)
+                {
+                    newList.Add(order.Value);
+                }
+            }
+            return newList;
+        }
     }
 
     public enum OrderState
