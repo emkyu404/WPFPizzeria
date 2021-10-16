@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
 C:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\App.xaml
-11-469138124
+10-1198837888
 
-271407809995
+26872256927
 192-1533232326
-AjoutItems.xaml;CommandeInfo.xaml;Create_Client.xaml;Create_Employee.xaml;Create_Order_Page.xaml;MainWindow.xaml;MenuClientEmployee.xaml;MenuCommande.xaml;OrderManagementSelection.xaml;WindowClient.xaml;WindowEmployee.xaml;
+AjoutItems.xaml;CommandeInfo.xaml;Create_Client.xaml;Create_Order_Page.xaml;MainWindow.xaml;MenuClientEmployee.xaml;MenuCommande.xaml;OrderManagementSelection.xaml;WindowClient.xaml;WindowEmployee.xaml;
 
-False
+True
 

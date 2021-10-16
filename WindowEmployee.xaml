@@ -29,6 +29,10 @@
             <TextBox Name="TextBoxName" Width="100" Height="20"></TextBox>
             <Label>Surname</Label>
             <TextBox Name="TextBoxSurname" Width="100" Height="20"></TextBox>
+            <ComboBox Name="TypeEmployee" Width="80" Height="25" Margin="5,0,0,0">
+                <ComboBoxItem>Commis</ComboBoxItem>
+                <ComboBoxItem>Livreur</ComboBoxItem>
+            </ComboBox>
             <Label>Address</Label>
             <TextBox Name="TextBoxAddress" Width="250" Height="20"></TextBox>
             <Label>Zip Code</Label>
