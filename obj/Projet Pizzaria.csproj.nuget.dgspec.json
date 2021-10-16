@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "E:\\EFREI\\Projet Pizzeria\\WPFPizzeria\\Projet Pizzaria.csproj": {}
+    "C:\\Users\\Antoine Cheng\\Documents\\GitHub\\WPFPizzeria\\Projet Pizzaria.csproj": {}
   },
   "projects": {
-    "E:\\EFREI\\Projet Pizzeria\\WPFPizzeria\\Projet Pizzaria.csproj": {
+    "C:\\Users\\Antoine Cheng\\Documents\\GitHub\\WPFPizzeria\\Projet Pizzaria.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\EFREI\\Projet Pizzeria\\WPFPizzeria\\Projet Pizzaria.csproj",
+        "projectUniqueName": "C:\\Users\\Antoine Cheng\\Documents\\GitHub\\WPFPizzeria\\Projet Pizzaria.csproj",
         "projectName": "Projet Pizzaria",
-        "projectPath": "E:\\EFREI\\Projet Pizzeria\\WPFPizzeria\\Projet Pizzaria.csproj",
-        "packagesPath": "C:\\Users\\daftp\\.nuget\\packages\\",
-        "outputPath": "E:\\EFREI\\Projet Pizzeria\\WPFPizzeria\\obj\\",
+        "projectPath": "C:\\Users\\Antoine Cheng\\Documents\\GitHub\\WPFPizzeria\\Projet Pizzaria.csproj",
+        "packagesPath": "C:\\Users\\Antoine Cheng\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Antoine Cheng\\Documents\\GitHub\\WPFPizzeria\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\daftp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Antoine Cheng\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

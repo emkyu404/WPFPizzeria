@@ -105,26 +105,38 @@ namespace Projet_Pizzaria
 
         private void Button_Delete_Click(object sender, RoutedEventArgs e)
         {
-            Employee emp = (Employee)employeesList.SelectedItem;
-            employees.Remove(emp);
-            Employee.getRegisteredEmployees().Remove(emp);
-            MessageBox.Show("Employé supprimé");
+            if(employeesList.SelectedItem != null)
+            {
+                Employee emp = (Employee)employeesList.SelectedItem;
+                employees.Remove(emp);
+                Employee.getRegisteredEmployees().Remove(emp);
+                resetTextBoxes();
+                MessageBox.Show("Employé supprimé");
+            }
+            else
+            {
+                MessageBox.Show("Sélectionner un employé");
+            }
         }
 
         private void Button_Update_Click(object sender, RoutedEventArgs e)
         {
-            int index = employeesList.SelectedIndex;
-            string address = TextBoxAddress.Text;
+            if (employeesList.SelectedItem != null)
+            {
+                if (TextBoxName.Text != "" && TextBoxSurname.Text != "" && TextBoxAddress.Text != "" && TextBoxZipCode.Text != "" && TextBoxCity.Text != "")
+                {
+                    int index = employeesList.SelectedIndex;
 
-            var firstSpaceIndex = address.IndexOf(" ");
-            int number = Int32.Parse(address.Substring(0, firstSpaceIndex));
-            string streetName = address.Substring(firstSpaceIndex + 1);
-            int zipCode = Int32.Parse(TextBoxZipCode.Text);
+                    Employee selectedEmployee = (Employee) employeesList.SelectedItem;
 
-            string type = employeesList.SelectedItem.GetType().ToString();
+                    string address = TextBoxAddress.Text;
 
-            Employee selectedEmployee;
+                    var firstSpaceIndex = address.IndexOf(" ");
+                    int number = Int32.Parse(address.Substring(0, firstSpaceIndex));
+                    string streetName = address.Substring(firstSpaceIndex + 1);
+                    int zipCode = Int32.Parse(TextBoxZipCode.Text);
 
+<<<<<<< HEAD
             if (type.Equals("Projet_Pizzaria.Commis"))
             {
                 selectedEmployee = new Commis(TextBoxName.Text, TextBoxSurname.Text, new Address(number, streetName, zipCode, TextBoxCity.Text));
@@ -132,12 +144,32 @@ namespace Projet_Pizzaria
             else
             {
                 selectedEmployee = new DeliveryMan(TextBoxName.Text, TextBoxSurname.Text, new Address(number, streetName, zipCode, TextBoxCity.Text));
-            }
-            
-            employees.RemoveAt(index);
-            employees.Insert(index, selectedEmployee);
-            Employee.getRegisteredEmployees().RemoveAt(index);
+=======
+                    string type = employeesList.SelectedItem.GetType().ToString();
 
+                    if (type.Equals("Projet_Pizzaria.Commis"))
+                    {
+                        new Commis(TextBoxName.Text, TextBoxSurname.Text, new Address(number, streetName, zipCode, TextBoxCity.Text));
+                    }
+                    else
+                    {
+                        new DeliveryMan(TextBoxName.Text, TextBoxSurname.Text, new Address(number, streetName, zipCode, TextBoxCity.Text));
+                    }
+                    employees.RemoveAt(index);
+                    employees.Insert(index, selectedEmployee);
+                    Employee.getRegisteredEmployees().RemoveAt(index);
+                    resetTextBoxes();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Sélectionner un employé");
+>>>>>>> a8aa9ebd81928cb356ff4e69c66e9c158f391d68
+            }
+        }
+
+        private void resetTextBoxes()
+        {
             TextBoxNumber.Clear();
             TextBoxName.Clear();
             TextBoxSurname.Clear();
@@ -148,9 +180,7 @@ namespace Projet_Pizzaria
 
         private void Button_Add_Click(object sender, RoutedEventArgs e)
         {
-            Window wce = new MenuClientEmployee();
-            wce.Show();
-            Close();
+            
         }
 
         private void employeesList_SelectionChanged(object sender, SelectionChangedEventArgs e)

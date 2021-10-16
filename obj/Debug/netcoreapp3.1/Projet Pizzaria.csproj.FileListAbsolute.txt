@@ -106,3 +106,7 @@ E:\EFREI\Projet Pizzeria\WPFPizzeria\obj\Debug\netcoreapp3.1\CommandeInfo.g.cs
 E:\EFREI\Projet Pizzeria\WPFPizzeria\obj\Debug\netcoreapp3.1\CommandeInfo.baml
 E:\EFREI\Projet Pizzeria\WPFPizzeria\obj\Debug\netcoreapp3.1\OrderManagementSelection.g.cs
 E:\EFREI\Projet Pizzeria\WPFPizzeria\obj\Debug\netcoreapp3.1\OrderManagementSelection.baml
+C:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\obj\Debug\netcoreapp3.1\CommandeInfo.g.cs
+C:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\obj\Debug\netcoreapp3.1\OrderManagementSelection.g.cs
+C:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\obj\Debug\netcoreapp3.1\CommandeInfo.baml
+C:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\obj\Debug\netcoreapp3.1\OrderManagementSelection.baml
