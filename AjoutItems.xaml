@@ -31,8 +31,8 @@
             <ComboBoxItem Content="small"></ComboBoxItem>
         </ComboBox>
         <Button Content="Ajouter" HorizontalAlignment="Left" Margin="276,159,0,0" VerticalAlignment="Top" Click="AddPizzaButton_Click" RenderTransformOrigin="0.852,-0.307" Height="24" Width="124"/>
-        <Button Content="Confirmer la liste" HorizontalAlignment="Left" Margin="612,348,0,0" VerticalAlignment="Top"  RenderTransformOrigin="0.852,-0.307" Height="24" Width="124"/>
-        <Button Content="Reset" HorizontalAlignment="Left" Margin="472,348,0,0" VerticalAlignment="Top"  RenderTransformOrigin="0.852,-0.307" Height="24" Width="124"/>
+        <Button Content="Confirmer la liste" HorizontalAlignment="Left" Margin="612,348,0,0" VerticalAlignment="Top" Click="CreateCommande_Click"  RenderTransformOrigin="0.852,-0.307" Height="24" Width="124"/>
+        <Button Content="Reset" HorizontalAlignment="Left" Margin="472,348,0,0" VerticalAlignment="Top" Click="ResetButton_Click" RenderTransformOrigin="0.852,-0.307" Height="24" Width="124"/>
         <Border BorderThickness="1" BorderBrush="Black" HorizontalAlignment="Left" Height="98" Margin="50,290,0,0" VerticalAlignment="Top" Width="392" Background="#FFDEDEDE">
         </Border>
         <Label Content="Ajouter une boisson" HorizontalAlignment="Left" Margin="50,259,0,0" VerticalAlignment="Top"/>

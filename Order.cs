@@ -13,6 +13,7 @@ namespace Projet_Pizzaria
         private bool paid;
         public List<Item> items;
 
+        /* Listes provisoires en attendant de gérer la communication */
         public static List<Order> PendingOrder = new List<Order>(); // Commande en cours de traitement (préparation)
         public static List<Order> ReadyToShipOrder = new List<Order>(); // Commande prête à la livraison
         public static List<Order> DeliveredOrder = new List<Order>(); // Commande livré
@@ -24,6 +25,7 @@ namespace Projet_Pizzaria
             this.number = numberInc++;
             this.date = DateTime.Now;
             this.clientName = c.Name;
+            Order.PendingOrder.Add(this);
         }
 
     }

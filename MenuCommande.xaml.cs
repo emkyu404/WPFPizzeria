@@ -18,9 +18,12 @@ namespace Projet_Pizzaria
     public partial class MenuCommande : Window
     {
         private Client currentClient;
+        private List<Item> currentItemList = new List<Item>();
         public MenuCommande()
         {
             InitializeComponent();
+            RefreshOrderTotalPrice();
+            RefreshItemList();
         }
 
         private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -56,10 +59,67 @@ namespace Projet_Pizzaria
             }
         }
 
+        private void ManageItems_Click(object sender, RoutedEventArgs e)
+        {
+            AjoutItems ai = new AjoutItems(currentItemList, this);
+
+            ai.Show();
+        }
+
+        public void SetItemList(List<Item> list)
+        {
+            currentItemList = list;
+            RefreshItemList();
+            RefreshOrderTotalPrice();
+        }
+
+        private void RefreshItemList()
+        {
+            ItemListTextBlock.Text = "";
+            foreach (Item i in currentItemList)
+            {
+                ItemListTextBlock.Text += i.ToString();
+                ItemListTextBlock.Text += Environment.NewLine;
+            }
+        }
+
+        private void RefreshOrderTotalPrice()
+        {
+            float result = 0;
+            foreach(Item i in currentItemList)
+            {
+                result += i.getPrice();
+            }
+            OrderTotalPriceLabel.Content = result.ToString() + "€";
+        }
+
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            AjoutItems ai = new AjoutItems();
-            ai.Show();
+            try
+            {
+                if (currentClient == null)
+                {
+                    MessageBox.Show("Une erreur est survenu, vérifier qu'un Client a été affecté à la commande");
+                }
+                else if (currentItemList.Count <= 0)
+                {
+                    MessageBox.Show("La commande est vide, veuiller ajouter des items");
+                }
+                else
+                {
+                    Order od = new Order(currentClient, currentItemList);
+                    MessageBox.Show("Commande créer !");
+                    this.Close();
+                }
+            }catch(Exception ex)
+            {
+                MessageBox.Show("Une erreur est survenu, vérifier qu'un Client a été affecté à la commande");
+            }
+        }
+        
+        private void CancelButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

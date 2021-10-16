@@ -19,9 +19,23 @@ namespace Projet_Pizzaria
     public partial class AjoutItems : Window
     {
         Dictionary<Item, int> ItemsList = new Dictionary<Item, int>(new ItemComparer());
-        public AjoutItems()
+        MenuCommande mc;
+        public AjoutItems(List<Item> items, MenuCommande mc)
         {
             InitializeComponent();
+            this.mc = mc;
+            foreach (Item i in items)
+            {
+                if (ItemsList.ContainsKey(i))
+                {
+                    ItemsList[i]++;
+                }
+                else
+                {
+                    ItemsList.Add(i, 1);
+                }
+            }
+            RefreshItemList();
         }
 
         private void AddPizzaButton_Click(object sender, RoutedEventArgs e)
@@ -30,7 +44,7 @@ namespace Projet_Pizzaria
             {
                 PizzaType type = Pizza.getTypeByString(PizzaTypeComboBox.Text);
                 PizzaSize size = Pizza.getSizeByString(PizzaSizeComboBox.Text);
-                Pizza pizza = new Pizza(size,type, Pizza.setPizzaPrice(size, type));
+                Pizza pizza = new Pizza(size, type, Pizza.setPizzaPrice(size, type));
                 if (ItemsList.ContainsKey(pizza))
                 {
                     ItemsList[pizza]++;
@@ -39,10 +53,11 @@ namespace Projet_Pizzaria
                 {
                     ItemsList.Add(pizza, 1);
                 }
-                
+
                 RefreshItemList();
 
-            }catch(Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show("Erreur");
             }
@@ -51,7 +66,7 @@ namespace Projet_Pizzaria
         private void RefreshItemList()
         {
             ItemListTextBlock.Text = "";
-            foreach(KeyValuePair<Item,int> entry in ItemsList)
+            foreach (KeyValuePair<Item, int> entry in ItemsList)
             {
                 ItemListTextBlock.Text += entry.Value.ToString() + "x " + entry.Key.ToString();
                 ItemListTextBlock.Text += Environment.NewLine;
@@ -79,6 +94,23 @@ namespace Projet_Pizzaria
             {
                 MessageBox.Show("Erreur");
             }
+        }
+        private void ResetButton_Click(object sender, RoutedEventArgs e)
+        {
+            ItemsList = new Dictionary<Item, int>(new ItemComparer());
+            RefreshItemList();
+        }
+
+        private void CreateCommande_Click(object sender, RoutedEventArgs e)
+        {
+            List<Item> newList = new List<Item>();
+            foreach(KeyValuePair<Item,int> entry in ItemsList)
+            {
+                newList.Add(entry.Key);
+            }
+            mc.SetItemList(newList);
+            MessageBox.Show("Mise à jour de la commande");
+            this.Close();
         }
     }
 }

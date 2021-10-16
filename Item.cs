@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Projet_Pizzaria
 {
-    abstract class Item
+    public abstract class Item
     {
         public float price;
 
@@ -15,5 +15,10 @@ namespace Projet_Pizzaria
 
         public override abstract String ToString();
         public override abstract bool Equals(object obj);
+
+        public float getPrice()
+        {
+            return this.price;
+        }
     }
 }
