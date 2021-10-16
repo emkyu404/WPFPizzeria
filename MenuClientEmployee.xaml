@@ -7,10 +7,8 @@
         mc:Ignorable="d"
         Title="Menu Client Employee" Height="450" Width="800">
     <Grid>
-        <StackPanel HorizontalAlignment="Center" Width="800" VerticalAlignment="Center" Height="163">
-            <Button Click="Button_Client_Click" Width="230" Height="45" Margin="0,0,0,20" HorizontalAlignment="Center">Module Client</Button>
-            <Button Click="Button_Employee_Click" Height="50" Width="230" Margin="0,0,0,20" HorizontalAlignment="Center">Module Effectif</Button>
-            <Button Content="Retour" Click="Button_Return_Click" Width="Auto" Margin="15,0,0,0" VerticalAlignment="Bottom" HorizontalAlignment="Left"/>
-        </StackPanel>
+        <Button Click="Button_Client_Click" Width="230" Height="45" Margin="0,161,0,228" HorizontalAlignment="Center">Module Client</Button>
+        <Button Content="Retour" Click="Button_Return_Click" Width="148" Height="29" Margin="40,50,612,355"/>
+        <Button Click="Button_Employee_Click" Height="50" Width="230" Margin="0,226,0,158" HorizontalAlignment="Center">Module Effectif</Button>
     </Grid>
 </Window>

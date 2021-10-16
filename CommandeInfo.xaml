@@ -1,0 +1,29 @@
+﻿<Window x:Class="Projet_Pizzaria.CommandeInfo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Projet_Pizzaria"
+        mc:Ignorable="d"
+        Title="CommandeInfo" Height="450" Width="800">
+    <Grid>
+        <Grid HorizontalAlignment="Center" Height="357" Margin="0,30,0,0" VerticalAlignment="Top" Width="740" Background="#FFE8E8E8">
+            <Label Content="N° de la commande&#xD;&#xA;" HorizontalAlignment="Left" VerticalAlignment="Top" Height="28" Margin="0,13,0,0"/>
+            <Label Content="Date de la commande&#xA;" HorizontalAlignment="Left" Margin="0,46,0,0" VerticalAlignment="Top" Height="28" Width="129"/>
+            <Label Content="Prix de la commande" HorizontalAlignment="Left" Margin="0,79,0,0" VerticalAlignment="Top" Height="28" Width="129"/>
+            <Label Content="Etat de la commande" HorizontalAlignment="Left" Margin="0,107,0,0" VerticalAlignment="Top" Height="28" Width="129"/>
+            <Label Content="Contenu de la commande" HorizontalAlignment="Left" Margin="510,1,0,0" VerticalAlignment="Top" Height="28" Width="151"/>
+            <TextBox x:Name="OrderNumberInput" HorizontalAlignment="Left" Height="28" Margin="120,14,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="86" TextChanged="TextBox_TextChanged"/>
+            <Button x:Name="GetOrderButton" Content="Sélectionner la commande" HorizontalAlignment="Left" Height="28" Margin="220,13,0,0" VerticalAlignment="Top" Width="166" Click="GetOrderButton_Click"/>
+            <TextBlock HorizontalAlignment="Left" Height="293" Margin="453,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="265" Background="White"/>
+            <Label Content="Simulation" HorizontalAlignment="Left" VerticalAlignment="Top" Height="28" Margin="163,207,0,0"/>
+            <Button Content="Préparation terminé" HorizontalAlignment="Left" Height="28" Margin="64,250,0,0" VerticalAlignment="Top" Width="119"/>
+            <Button Content="Commande payé" HorizontalAlignment="Left" Height="28" Margin="207,250,0,0" VerticalAlignment="Top" Width="149"/>
+            <Label x:Name="OrderDateLabel" Content="" HorizontalAlignment="Left" Margin="134,46,0,0" VerticalAlignment="Top" Height="28" Width="129"/>
+            <Label x:Name="OrderPriceLabel" Content="" HorizontalAlignment="Left" Margin="134,79,0,0" VerticalAlignment="Top" Height="28" Width="129"/>
+            <Label x:Name="OrderStateLabel" Content="" HorizontalAlignment="Left" Margin="134,107,0,0" VerticalAlignment="Top" Height="28" Width="129"/>
+
+        </Grid>
+
+    </Grid>
+</Window>

@@ -10,6 +10,9 @@
     <Compile Update="AjoutItems.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="CommandeInfo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Create_Client.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -28,6 +31,9 @@
   </ItemGroup>
   <ItemGroup>
     <Page Update="AjoutItems.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="CommandeInfo.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Create_Client.xaml">

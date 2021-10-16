@@ -112,7 +112,7 @@ namespace Projet_Pizzaria
                 else
                 {
                     Order od = new Order(currentClient, currentItemList);
-                    MessageBox.Show("Commande créer !");
+                    MessageBox.Show("Commande créer ! N° de commande : " + Order.numberInc);
                     this.Close();
                 }
             }catch(Exception ex)

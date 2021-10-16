@@ -7,17 +7,17 @@ namespace Projet_Pizzaria
     class Order
     {
         private int number;
-        private static int numberInc = 0;
         private DateTime date;
         private string clientName;
         private bool paid;
-        public List<Item> items;
+        private List<Item> items;
+        private OrderState orderState;
 
         /* Listes provisoires en attendant de gérer la communication */
-        public static List<Order> PendingOrder = new List<Order>(); // Commande en cours de traitement (préparation)
-        public static List<Order> ReadyToShipOrder = new List<Order>(); // Commande prête à la livraison
-        public static List<Order> DeliveredOrder = new List<Order>(); // Commande livré
-        public static List<Order> PaidOrder = new List<Order>(); //
+        public static Dictionary<int, Order> OrderList = new Dictionary<int,Order>();
+
+        public static int numberInc = 0;
+
 
         public Order(Client c, List<Item> l)
         {
@@ -25,8 +25,45 @@ namespace Projet_Pizzaria
             this.number = numberInc++;
             this.date = DateTime.Now;
             this.clientName = c.Name;
-            Order.PendingOrder.Add(this);
+            this.orderState = OrderState.preparing;
+            Order.OrderList.Add(this.number,this);
         }
 
+        public static Order getOrderByNum(int n)
+        {
+            return OrderList[n];
+        }
+
+        public List<Item> getItems()
+        {
+            return items;
+        }
+
+        public OrderState getState()
+        {
+            return orderState;
+        }
+
+        public DateTime getDate()
+        {
+            return date;
+        }
+
+        public float getTotalPrice()
+        {
+            float result = 0;
+            foreach(Item i in items)
+            {
+                result += i.getPrice();
+            }
+            return result;
+        }
+    }
+
+    public enum OrderState
+    {
+        preparing,
+        shipping,
+        paid
     }
 }
