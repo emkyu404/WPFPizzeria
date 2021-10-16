@@ -53,7 +53,7 @@ namespace Projet_Pizzaria {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Projet Pizzaria;component/ordermanagementselection.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Projet Pizzaria;V1.0.0.0;component/ordermanagementselection.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\OrderManagementSelection.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

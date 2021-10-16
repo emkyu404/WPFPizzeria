@@ -14,5 +14,10 @@ namespace Projet_Pizzaria
         {
             get => "Commis";
         }
+
+        public override string getType()
+        {
+            return "Commis";
+        }
     }
 }

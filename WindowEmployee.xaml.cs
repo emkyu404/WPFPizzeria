@@ -136,6 +136,15 @@ namespace Projet_Pizzaria
                     string streetName = address.Substring(firstSpaceIndex + 1);
                     int zipCode = Int32.Parse(TextBoxZipCode.Text);
 
+<<<<<<< HEAD
+            if (type.Equals("Projet_Pizzaria.Commis"))
+            {
+                selectedEmployee = new Commis(TextBoxName.Text, TextBoxSurname.Text, new Address(number, streetName, zipCode, TextBoxCity.Text));
+            }
+            else
+            {
+                selectedEmployee = new DeliveryMan(TextBoxName.Text, TextBoxSurname.Text, new Address(number, streetName, zipCode, TextBoxCity.Text));
+=======
                     string type = employeesList.SelectedItem.GetType().ToString();
 
                     if (type.Equals("Projet_Pizzaria.Commis"))
@@ -155,6 +164,7 @@ namespace Projet_Pizzaria
             else
             {
                 MessageBox.Show("Sélectionner un employé");
+>>>>>>> a8aa9ebd81928cb356ff4e69c66e9c158f391d68
             }
         }
 

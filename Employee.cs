@@ -48,6 +48,8 @@ namespace Projet_Pizzaria
             this.orders = new List<Order>();
         }
 
+        public List<Order> Orders => orders;
+
         public string Address => address.Number + " " + address.StreetName;
 
         public int ZipCode => address.ZipCode;
@@ -78,5 +80,7 @@ namespace Projet_Pizzaria
         {
             return surname;
         }
+
+        public abstract string getType();
     }
 }

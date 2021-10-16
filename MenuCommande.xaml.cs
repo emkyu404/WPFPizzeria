@@ -19,21 +19,29 @@ namespace Projet_Pizzaria
     {
         private Client currentClient;
         private List<Item> currentItemList = new List<Item>();
+        private Commis currentCommis;
+
         public MenuCommande()
         {
             InitializeComponent();
             RefreshOrderTotalPrice();
             RefreshItemList();
+            InitializeCommisComboBox();
         }
 
-        private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void InitializeCommisComboBox()
         {
-
-        }
-
-        private void ClientComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
+           
+            foreach(KeyValuePair<int, Employee> e in Employee.RegisteredEmployees)
+            {
+                if(e.Value.getType() == "Commis")
+                {
+                    ComboBoxItem cbi = new ComboBoxItem();
+                    cbi.Content = e.Value.getNumber();
+                    CommisComboBox.Items.Add(cbi);
+                }
+            }
+            
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -97,9 +105,14 @@ namespace Projet_Pizzaria
         {
             try
             {
+                setCurrentCommis();
                 if (currentClient == null)
                 {
                     MessageBox.Show("Une erreur est survenu, vérifier qu'un Client a été affecté à la commande");
+                }
+                else if(currentCommis == null)
+                {
+                    MessageBox.Show("Veuillez choisir un commis en charge de la commande");
                 }
                 else if (currentItemList.Count <= 0)
                 {
@@ -112,6 +125,7 @@ namespace Projet_Pizzaria
                 else
                 {
                     Order od = new Order(currentClient, currentItemList);
+                    currentCommis.Orders.Add(od);
                     MessageBox.Show("Commande créer ! N° de commande : " + Order.numberInc);
                     OrderManagementSelection oms = new OrderManagementSelection();
                     oms.Show();
@@ -120,6 +134,17 @@ namespace Projet_Pizzaria
             }catch(Exception ex)
             {
                 MessageBox.Show("Une erreur est survenu, vérifier qu'un Client a été affecté à la commande");
+            }
+        }
+
+        private void setCurrentCommis()
+        {
+            try
+            {
+                currentCommis = (Commis)Employee.RegisteredEmployees[Int32.Parse(CommisComboBox.Text)];
+            }catch(Exception ex)
+            {
+                MessageBox.Show("Erreur");
             }
         }
 
