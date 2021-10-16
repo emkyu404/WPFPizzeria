@@ -113,6 +113,8 @@ namespace Projet_Pizzaria
                 {
                     Order od = new Order(currentClient, currentItemList);
                     MessageBox.Show("Commande créer ! N° de commande : " + Order.numberInc);
+                    OrderManagementSelection oms = new OrderManagementSelection();
+                    oms.Show();
                     this.Close();
                 }
             }catch(Exception ex)
@@ -135,6 +137,8 @@ namespace Projet_Pizzaria
         
         private void CancelButton_Click(object sender, RoutedEventArgs e)
         {
+            OrderManagementSelection oms = new OrderManagementSelection();
+            oms.Show();
             this.Close();
         }
     }

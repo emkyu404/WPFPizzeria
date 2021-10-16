@@ -13,9 +13,9 @@
             <Label Content="Prix de la commande" HorizontalAlignment="Left" Margin="0,79,0,0" VerticalAlignment="Top" Height="28" Width="129"/>
             <Label Content="Etat de la commande" HorizontalAlignment="Left" Margin="0,107,0,0" VerticalAlignment="Top" Height="28" Width="129"/>
             <Label Content="Contenu de la commande" HorizontalAlignment="Left" Margin="510,1,0,0" VerticalAlignment="Top" Height="28" Width="151"/>
-            <TextBox x:Name="OrderNumberInput" HorizontalAlignment="Left" Height="28" Margin="120,14,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="86" TextChanged="TextBox_TextChanged"/>
+            <TextBox x:Name="OrderNumberInput" HorizontalAlignment="Left" Height="28" Margin="120,14,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="86"/>
             <Button x:Name="GetOrderButton" Content="Sélectionner la commande" HorizontalAlignment="Left" Height="28" Margin="220,13,0,0" VerticalAlignment="Top" Width="166" Click="GetOrderButton_Click"/>
-            <TextBlock HorizontalAlignment="Left" Height="293" Margin="453,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="265" Background="White"/>
+            <TextBlock x:Name="OrderTextBlock" HorizontalAlignment="Left" Height="293" Margin="453,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="265" Background="White"/>
             <Label Content="Simulation" HorizontalAlignment="Left" VerticalAlignment="Top" Height="28" Margin="163,207,0,0"/>
             <Button Content="Préparation terminé" HorizontalAlignment="Left" Height="28" Margin="64,250,0,0" VerticalAlignment="Top" Width="119"/>
             <Button Content="Commande payé" HorizontalAlignment="Left" Height="28" Margin="207,250,0,0" VerticalAlignment="Top" Width="149"/>

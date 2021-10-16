@@ -28,10 +28,11 @@ namespace Projet_Pizzaria
             try
             {
                 currentOrder = Order.getOrderByNum(Int32.Parse(OrderNumberInput.Text));
+                RefreshAllInfo();
             }
             catch(Exception ex)
             {
-                MessageBox.Show("Une erreur est survenue.");
+                MessageBox.Show("Une erreur est survenue. " + ex.Message);
                 OrderNumberInput.Text = "";
                 currentOrder = null;
             }
@@ -42,6 +43,12 @@ namespace Projet_Pizzaria
             OrderDateLabel.Content = currentOrder.getDate().ToString();
             OrderPriceLabel.Content = currentOrder.getTotalPrice().ToString();
             OrderStateLabel.Content = currentOrder.getState().ToString();
+
+            foreach(Item i in currentOrder.getItems())
+            {
+                OrderTextBlock.Text += i.ToString();
+                OrderTextBlock.Text += Environment.NewLine;
+            }
         }
     }
 }

@@ -42,8 +42,8 @@ namespace Projet_Pizzaria
 
         private void Button_Command_Click(object sender, RoutedEventArgs e)
         {
-            MenuCommande mcmd = new MenuCommande();
-            mcmd.Show();
+            OrderManagementSelection oms = new OrderManagementSelection();
+            oms.Show();
         }
 
         private void Button_Client_Effectif_Click(object sender, RoutedEventArgs e)

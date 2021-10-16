@@ -22,7 +22,7 @@ namespace Projet_Pizzaria
         public Order(Client c, List<Item> l)
         {
             this.items = l;
-            this.number = numberInc++;
+            this.number = ++numberInc;
             this.date = DateTime.Now;
             this.clientName = c.Name;
             this.orderState = OrderState.preparing;

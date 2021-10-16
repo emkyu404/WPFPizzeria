@@ -7,11 +7,9 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <StackPanel HorizontalAlignment="Left">
-            <Button Click="Button_Command_Click"> Module Commmande </Button>
-            <Button> Module Statistique </Button>
-            <Button Click="Button_Client_Effectif_Click"> Module Client / Effectif </Button>
-            <Button > Module Communication </Button>
-        </StackPanel>
+        <Button Click="Button_Command_Click" Content="Module Commande" Margin="76,54,482,253"/>
+        <Button Margin="457,258,104,45"> Module Statistique </Button>
+        <Button Click="Button_Client_Effectif_Click" Margin="457,54,104,253"> Module Client / Effectif </Button>
+        <Button Margin="76,262,482,45" >Module Communication</Button>
     </Grid>
 </Window>
