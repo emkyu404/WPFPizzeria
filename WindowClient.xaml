@@ -16,10 +16,11 @@
                     <GridViewColumn Header="Name" Width="120" DisplayMemberBinding="{Binding Name}" />
                     <GridViewColumn Header="Surname" Width="120" DisplayMemberBinding="{Binding Surname}" />
                     <GridViewColumn Header="PhoneNumber" Width="120" DisplayMemberBinding="{Binding PhoneNumber}" />
-                    <GridViewColumn Header="Address" Width="300" DisplayMemberBinding="{Binding Address}" />
+                    <GridViewColumn Header="Address" Width="250" DisplayMemberBinding="{Binding Address}" />
                     <GridViewColumn Header="ZipCode" Width="120" DisplayMemberBinding="{Binding ZipCode}" />
                     <GridViewColumn Header="City" Width="120" DisplayMemberBinding="{Binding City}" />
                     <GridViewColumn Header="FirstOrderDate" Width="150" DisplayMemberBinding="{Binding FirstOrderDate}" />
+                    <GridViewColumn Header="Total" Width="50" DisplayMemberBinding="{Binding Total}" />
                 </GridView>
             </ListView.View>
         </ListView>

@@ -109,6 +109,7 @@ namespace Projet_Pizzaria
             Client c = (Client)clientsList.SelectedItem;
             clients.Remove(c);
             Client.getRegisteredClient().Remove(c);
+            resetTextBox();
             MessageBox.Show("Client supprimé");
         }
         private void Button_Update_Click(object sender, EventArgs e)
@@ -126,6 +127,11 @@ namespace Projet_Pizzaria
             clients.Insert(index, selectedClient);
             Client.getRegisteredClient().RemoveAt(index);
 
+            resetTextBox();
+        }
+
+        private void resetTextBox()
+        {
             TextBoxName.Clear();
             TextBoxSurname.Clear();
             TextBoxPhoneNumber.Clear();
@@ -136,7 +142,7 @@ namespace Projet_Pizzaria
 
         private void Button_Add_Click(object sender, RoutedEventArgs e)
         {
-            Window wce = new MenuClientEmployee();
+            Window wce = new Create_Client();
             wce.Show();
             Close();
         }

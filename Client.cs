@@ -12,6 +12,7 @@ namespace Projet_Pizzaria
         private string phoneNumber;
         private DateTime firstOrderDate;
         private Address address;
+        private double total;
 
         public string Name
         {
@@ -32,8 +33,7 @@ namespace Projet_Pizzaria
         {
             get => firstOrderDate;
         }
-
-
+        
         private static List<Client> RegisteredClient = new List<Client>();
         /* ça bug si tu fais l'initialisation ici, créer une méthode statique que tu appelle à l'ouverture de mainwindow à la limite
         {
@@ -59,6 +59,22 @@ namespace Projet_Pizzaria
         public int ZipCode => address.ZipCode;
 
         public string City => address.City;
+
+        public double Total
+        {
+            get => getTotal(this);
+        }
+        public double getTotal(Client c)
+        {
+            List<Order> orders = new List<Order>();
+            orders = Order.getAllOrderByClient(c);
+            double total = 0;
+            foreach(Order o in orders)
+            {
+                total += o.getTotalPrice();
+            }
+            return total;
+        }
 
         public static Client getClientByPhoneNumber(string pn)
         {

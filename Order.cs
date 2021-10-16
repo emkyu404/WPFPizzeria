@@ -65,7 +65,7 @@ namespace Projet_Pizzaria
         }
 
         // faiblesse : Les clients ne peuvent pas porter le même nom
-        public List<Order> getallOrderByClient(Client c)
+        public static List<Order> getAllOrderByClient(Client c)
         {
             List<Order> newList = new List<Order>();
             foreach(KeyValuePair<int,Order> order in Order.OrderList)
