@@ -24,7 +24,7 @@ namespace Projet_Pizzaria
 
         public async Task shipOrderAsync(Order od)
         {
-            this.Orders.Add(od);
+            this.Orders.Add(od.getNumber(),od);
             await Task.Run(() => shipOrderOrder(od));
         }
 

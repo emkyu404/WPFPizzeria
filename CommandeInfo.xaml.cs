@@ -64,6 +64,7 @@ namespace Projet_Pizzaria
             OrderDateLabel.Content = currentOrder.getDate().ToString();
             OrderPriceLabel.Content = currentOrder.getTotalPrice().ToString() + "€";
             OrderStateLabel.Content = currentOrder.getState().ToString();
+            OrderTextBlock.Text = "";
 
             foreach(Item i in currentOrder.getItems())
             {
@@ -71,7 +72,6 @@ namespace Projet_Pizzaria
                 OrderTextBlock.Text += Environment.NewLine;
             }
             HandleButtons();
-
         }
 
         private void HandleButtons()
@@ -100,6 +100,13 @@ namespace Projet_Pizzaria
             }
         }
 
+        private void DesactivateAllButtons()
+        {
+            SimReadyButton.IsEnabled = false;
+            SimPaid_Button.IsEnabled = false;
+            SimShipping_Button.IsEnabled = false;
+        }
+
         private async void SimReadyButton_Click(object sender, RoutedEventArgs e)
         {
             if (currentOrder == null)
@@ -108,8 +115,11 @@ namespace Projet_Pizzaria
             }
             else
             {
+                DesactivateAllButtons();
                 NotifyCommunicationModuleTookCharge();
                 await Kitchen.getInstance().prepareOrderAsync(currentOrder);
+                Commis commisAffected = (Commis)Employee.getEmployeeByOrder(currentOrder, "Commis");
+                commisAffected.updateOrder(currentOrder);
                 RefreshAllInfo();
                 NotifyCommunicationModuleReady();
             }
@@ -119,13 +129,18 @@ namespace Projet_Pizzaria
         {
             try
             {
+                DesactivateAllButtons();
                 currentDM = (DeliveryMan) Employee.RegisteredEmployees[Int32.Parse(DeliveryManComboBox.Text)];
                 NotifyCommunicationModuleShipping();
                 await currentDM.shipOrderAsync(currentOrder);
+                Commis commisAffected = (Commis)Employee.getEmployeeByOrder(currentOrder,"Commis");
+                commisAffected.updateOrder(currentOrder);
+                currentDM.updateOrder(currentOrder);
                 RefreshAllInfo();
                 NotifyCommunicationModuleShipped();
             }catch(Exception ex)
             {
+                HandleButtons();
                 MessageBox.Show("Veuillez choisir un livreur pour la simulation");
             }
         }
@@ -138,7 +153,7 @@ namespace Projet_Pizzaria
                 {
                     ModuleCommunication mc = (ModuleCommunication)item;
                     mc.NewClientMessage(currentOrder.getClient().PhoneNumber, "Votre commande (N°" + currentOrder.getNumber() + ") est en cours de livraison...");
-                    mc.NewDeliveryManMessage(currentDM.Number.ToString(),"Livraison de la commande n°" + currentOrder.getNumber() + "en cours ...");
+                    mc.NewDeliveryManMessage(currentDM.Number.ToString(),"Livraison de la commande n°" + currentOrder.getNumber() + " en cours ...");
                 }
             }
         }
@@ -190,7 +205,37 @@ namespace Projet_Pizzaria
 
         private void SimPaid_Button_Click(object sender, RoutedEventArgs e)
         {
+            if (currentOrder == null)
+            {
+                MessageBox.Show("Veuillez choisir une commande avant de réaliser la simulation");
+            }
+            else
+            {
+                try
+                {
+                    Commis commisAffected = (Commis)Employee.getEmployeeByOrder(currentOrder, "Commis");
+                    DeliveryMan deliveryManAffected = (DeliveryMan)Employee.getEmployeeByOrder(currentOrder, "Livreur");
+                    currentOrder.isPaid();
+                    NotifyCommunicationModulePaid(commisAffected);
+                    RefreshAllInfo();
+                }catch(Exception ex)
+                {
 
+                }
+            }
+        }
+
+        private void NotifyCommunicationModulePaid(Commis commis)
+        {
+            foreach (Window item in Application.Current.Windows)
+            {
+                if (item.Title == "Module Communication")
+                {
+                    ModuleCommunication mc = (ModuleCommunication)item;
+                    mc.NewClientMessage(currentOrder.getClient().PhoneNumber, "Confirmation du paiement pour votre commande N°" + currentOrder.getNumber() + " ! Merci et à bientôt");
+                    mc.NewCommisMessage(commis.Number.ToString(), "La commande n°" + currentOrder.getNumber() + " a été payé.");
+                }
+            }
         }
     }
 }

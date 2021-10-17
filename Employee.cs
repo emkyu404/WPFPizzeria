@@ -13,7 +13,7 @@ namespace Projet_Pizzaria
 
         public static int numInc = 0;
 
-        private List<Order> orders;
+        private Dictionary<int, Order> orders;
 
         public int Number
         {
@@ -45,10 +45,10 @@ namespace Projet_Pizzaria
             this.name = name;
             this.surname = surname; 
             this.address = address;
-            this.orders = new List<Order>();
+            this.orders = new Dictionary<int,Order>();
         }
 
-        public List<Order> Orders => orders;
+        public Dictionary<int, Order> Orders => orders;
 
         public string Address => address.Number + " " + address.StreetName;
 
@@ -64,6 +64,23 @@ namespace Projet_Pizzaria
                 newList.Add(emp.Value);
             }
             return newList;
+        }
+
+        public static Employee getEmployeeByOrder(Order o, string type)
+        {
+            foreach(KeyValuePair<int, Employee> e in Employee.RegisteredEmployees)
+            {
+                if (e.Value.Orders.ContainsValue(o) && e.Value.getType() == type)
+                {
+                    return e.Value;
+                }
+            }
+            return null;
+        }
+
+        public void updateOrder(Order o)
+        {
+            this.Orders[o.getNumber()] = o;
         }
 
         public int getNumber()

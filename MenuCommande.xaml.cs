@@ -54,11 +54,14 @@ namespace Projet_Pizzaria
         {
             try
             {
-                Client c = Client.getClientByPhoneNumber(TelTextBox.Text);
-                if (c == null) throw new Exception();
+                if (TelTextBox.Text != "")
+                {
+                    Client c = Client.getClientByPhoneNumber(TelTextBox.Text);
+                    if (c == null) throw new Exception();
 
-                currentClient = c;
-                ClientNameLabel.Content = currentClient.Surname + " " +currentClient.Name;
+                    currentClient = c;
+                    ClientNameLabel.Content = currentClient.Surname + " " + currentClient.Name;
+                }
 
             }catch(Exception ex)
             {
@@ -125,7 +128,7 @@ namespace Projet_Pizzaria
                 else
                 {
                     Order od = new Order(currentClient, currentItemList);
-                    currentCommis.Orders.Add(od);
+                    currentCommis.Orders.Add(od.getNumber(), od);
                     NotifyCommunicationModule(od.getNumber());
                     MessageBox.Show("Commande créer ! N° de commande : " + Order.numberInc);
                     OrderManagementSelection oms = new OrderManagementSelection();

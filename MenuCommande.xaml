@@ -14,7 +14,7 @@
             <Button Content="Nouveau client" Height="21" Canvas.Left="235" Canvas.Top="78" Width="120" Click="Button_Click"/>
             <Button Content="Gestion de la commande" Height="27" Canvas.Left="519" Canvas.Top="38" Width="158" Click="ManageItems_Click"/>
             <Label Content="Commande actuelle&#xD;&#xA;" Height="25" Canvas.Left="538" Canvas.Top="74" Width="120"/>
-            <Button Content="Button" Height="33" Canvas.Left="40" Canvas.Top="244" Width="143" Click="Button_Click_1"/>
+            <Button Content="Créer la commande" Height="33" Canvas.Left="40" Canvas.Top="244" Width="143" Click="Button_Click_1"/>
             <Label Content="Commis en charge :" Height="25" Canvas.Left="8" Canvas.Top="-42" Width="116"/>
         </Canvas>
         <Label Content="Client Actuel :&#xD;&#xA;" HorizontalAlignment="Left" Margin="90,177,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.223,3.999" Width="100" Height="26"/>
