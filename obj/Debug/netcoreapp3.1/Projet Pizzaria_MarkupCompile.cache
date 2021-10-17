@@ -9,12 +9,21 @@ Projet_Pizzaria
 none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
+<<<<<<< HEAD
 E:\EFREI\Projet Pizzeria\WPFPizzeria\App.xaml
 11-207525477
 
 252101167247
 192-1533232326
 AjoutItems.xaml;CommandeInfo.xaml;Create_Client.xaml;Create_Order_Page.xaml;MainWindow.xaml;MenuClientEmployee.xaml;MenuCommande.xaml;ModuleCommunication.xaml;OrderManagementSelection.xaml;WindowClient.xaml;WindowEmployee.xaml;
+=======
+C:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\App.xaml
+11-469138124
+
+25-1732779538
+192-1533232326
+AjoutItems.xaml;CommandeInfo.xaml;Create_Client.xaml;Create_Employee.xaml;Create_Order_Page.xaml;MainWindow.xaml;MenuClientEmployee.xaml;MenuCommande.xaml;OrderManagementSelection.xaml;WindowClient.xaml;WindowEmployee.xaml;
+>>>>>>> 400688e2cbe1b4fc840394d879d3241ee1a4a269
 
 True
 

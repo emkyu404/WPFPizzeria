@@ -109,7 +109,7 @@ namespace Projet_Pizzaria
             {
                 Employee emp = (Employee)employeesList.SelectedItem;
                 employees.Remove(emp);
-                Employee.getRegisteredEmployees().Remove(emp);
+                Employee.RegisteredEmployees.Remove(emp.Number);
                 resetTextBoxes();
                 MessageBox.Show("Employé supprimé");
             }
@@ -127,44 +127,42 @@ namespace Projet_Pizzaria
                 {
                     int index = employeesList.SelectedIndex;
 
-                    Employee selectedEmployee = (Employee) employeesList.SelectedItem;
+                    Employee selectedEmployee = createEmployee();
 
-                    string address = TextBoxAddress.Text;
-
-                    var firstSpaceIndex = address.IndexOf(" ");
-                    int number = Int32.Parse(address.Substring(0, firstSpaceIndex));
-                    string streetName = address.Substring(firstSpaceIndex + 1);
-                    int zipCode = Int32.Parse(TextBoxZipCode.Text);
-
-<<<<<<< HEAD
-            if (type.Equals("Projet_Pizzaria.Commis"))
-            {
-                selectedEmployee = new Commis(TextBoxName.Text, TextBoxSurname.Text, new Address(number, streetName, zipCode, TextBoxCity.Text));
-            }
-            else
-            {
-                selectedEmployee = new DeliveryMan(TextBoxName.Text, TextBoxSurname.Text, new Address(number, streetName, zipCode, TextBoxCity.Text));
-=======
-                    string type = employeesList.SelectedItem.GetType().ToString();
-
-                    if (type.Equals("Projet_Pizzaria.Commis"))
-                    {
-                        new Commis(TextBoxName.Text, TextBoxSurname.Text, new Address(number, streetName, zipCode, TextBoxCity.Text));
-                    }
-                    else
-                    {
-                        new DeliveryMan(TextBoxName.Text, TextBoxSurname.Text, new Address(number, streetName, zipCode, TextBoxCity.Text));
-                    }
                     employees.RemoveAt(index);
                     employees.Insert(index, selectedEmployee);
                     Employee.getRegisteredEmployees().RemoveAt(index);
                     resetTextBoxes();
                 }
+                else
+                {
+                    MessageBox.Show("Les champs sont mal remplis");
+                }
             }
             else
             {
                 MessageBox.Show("Sélectionner un employé");
->>>>>>> a8aa9ebd81928cb356ff4e69c66e9c158f391d68
+            }
+        }
+
+        private Employee createEmployee()
+        {
+            string address = TextBoxAddress.Text;
+
+            var firstSpaceIndex = address.IndexOf(" ");
+            int number = Int32.Parse(address.Substring(0, firstSpaceIndex));
+            string streetName = address.Substring(firstSpaceIndex + 1);
+            int zipCode = Int32.Parse(TextBoxZipCode.Text);
+
+            string type = TypeEmployee.Text;
+
+            if (type.Equals("Commis"))
+            {
+                return new Commis(TextBoxName.Text, TextBoxSurname.Text, new Address(number, streetName, zipCode, TextBoxCity.Text));
+            }
+            else
+            {
+                return new DeliveryMan(TextBoxName.Text, TextBoxSurname.Text, new Address(number, streetName, zipCode, TextBoxCity.Text));
             }
         }
 
@@ -173,6 +171,7 @@ namespace Projet_Pizzaria
             TextBoxNumber.Clear();
             TextBoxName.Clear();
             TextBoxSurname.Clear();
+            TypeEmployee.SelectedIndex = -1;
             TextBoxAddress.Clear();
             TextBoxZipCode.Clear();
             TextBoxCity.Clear();
@@ -180,7 +179,20 @@ namespace Projet_Pizzaria
 
         private void Button_Add_Click(object sender, RoutedEventArgs e)
         {
-            
+            if (employeesList.SelectedItem == null)
+            {
+                if (TextBoxName.Text != "" && TextBoxSurname.Text != "" && TypeEmployee.Text != "" && TextBoxAddress.Text != "" &&
+                    TextBoxZipCode.Text != "" && TextBoxCity.Text != "")
+                {
+                    Employee newEmployee = createEmployee();
+                    employees.Add(newEmployee);
+                    resetTextBoxes();
+                }
+                else
+                {
+                    MessageBox.Show("Les champs sont mal remplis");
+                }
+            }
         }
 
         private void employeesList_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -189,9 +201,20 @@ namespace Projet_Pizzaria
             try { 
                 if (selectedEmployee != null)
                 {
+                    string type = selectedEmployee.getType().ToString();
+                    if (type.Equals("Commis"))
+                    {
+                        type = "Commis";
+                    }
+                    else
+                    {
+                        type = "Livreur";
+                    }
+
                     TextBoxNumber.Text = selectedEmployee.Number.ToString();
                     TextBoxName.Text = selectedEmployee.Name;
                     TextBoxSurname.Text = selectedEmployee.Surname;
+                    TypeEmployee.Text = type;
                     TextBoxAddress.Text = selectedEmployee.Address;
                     TextBoxZipCode.Text = selectedEmployee.ZipCode.ToString();
                     TextBoxCity.Text = selectedEmployee.City;

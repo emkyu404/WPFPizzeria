@@ -1,5 +1,6 @@
 ﻿
 
+<<<<<<< HEAD
 FE:\EFREI\Projet Pizzeria\WPFPizzeria\AjoutItems.xaml;;
 FE:\EFREI\Projet Pizzeria\WPFPizzeria\CommandeInfo.xaml;;
 FE:\EFREI\Projet Pizzeria\WPFPizzeria\Create_Client.xaml;;
@@ -10,4 +11,16 @@ FE:\EFREI\Projet Pizzeria\WPFPizzeria\MenuCommande.xaml;;
 FE:\EFREI\Projet Pizzeria\WPFPizzeria\ModuleCommunication.xaml;;
 FE:\EFREI\Projet Pizzeria\WPFPizzeria\OrderManagementSelection.xaml;;
 FE:\EFREI\Projet Pizzeria\WPFPizzeria\WindowEmployee.xaml;;
+=======
+FC:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\AjoutItems.xaml;;
+FC:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\CommandeInfo.xaml;;
+FC:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\Create_Client.xaml;;
+FC:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\Create_Order_Page.xaml;;
+FC:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\MainWindow.xaml;;
+FC:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\MenuClientEmployee.xaml;;
+FC:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\MenuCommande.xaml;;
+FC:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\OrderManagementSelection.xaml;;
+FC:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\WindowEmployee.xaml;;
+FC:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\Create_Employee.xaml;;
+>>>>>>> 400688e2cbe1b4fc840394d879d3241ee1a4a269
 
