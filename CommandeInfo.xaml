@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Projet_Pizzaria"
         mc:Ignorable="d"
+        Closing="Window_Closing"
         Title="CommandeInfo" Height="450" Width="800">
     <Grid>
         <Grid HorizontalAlignment="Center" Height="357" Margin="0,30,0,0" VerticalAlignment="Top" Width="740" Background="#FFE8E8E8">
@@ -16,12 +17,14 @@
             <TextBox x:Name="OrderNumberInput" HorizontalAlignment="Left" Height="28" Margin="120,14,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="86"/>
             <Button x:Name="GetOrderButton" Content="Sélectionner la commande" HorizontalAlignment="Left" Height="28" Margin="220,13,0,0" VerticalAlignment="Top" Width="166" Click="GetOrderButton_Click"/>
             <TextBlock x:Name="OrderTextBlock" HorizontalAlignment="Left" Height="293" Margin="453,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="265" Background="White"/>
-            <Label Content="Simulation" HorizontalAlignment="Left" VerticalAlignment="Top" Height="28" Margin="163,207,0,0"/>
-            <Button Content="Préparation terminé" HorizontalAlignment="Left" Height="28" Margin="64,250,0,0" VerticalAlignment="Top" Width="119"/>
-            <Button Content="Commande payé" HorizontalAlignment="Left" Height="28" Margin="207,250,0,0" VerticalAlignment="Top" Width="149"/>
+            <Label Content="Simulation" HorizontalAlignment="Left" VerticalAlignment="Top" Height="28" Margin="24,195,0,0"/>
+            <Button x:Name="SimReadyButton" Content="Préparation terminé" HorizontalAlignment="Left" Height="28" Margin="24,250,0,0" VerticalAlignment="Top" Width="119" Click="SimReadyButton_Click"/>
+            <Button x:Name="SimPaid_Button" Content="Commande payé" HorizontalAlignment="Left" Height="28" Margin="303,250,0,0" VerticalAlignment="Top" Width="116" Click="SimPaid_Button_Click"/>
             <Label x:Name="OrderDateLabel" Content="" HorizontalAlignment="Left" Margin="134,46,0,0" VerticalAlignment="Top" Height="28" Width="129"/>
             <Label x:Name="OrderPriceLabel" Content="" HorizontalAlignment="Left" Margin="134,79,0,0" VerticalAlignment="Top" Height="28" Width="129"/>
             <Label x:Name="OrderStateLabel" Content="" HorizontalAlignment="Left" Margin="134,107,0,0" VerticalAlignment="Top" Height="28" Width="129"/>
+            <ComboBox x:Name="DeliveryManComboBox" HorizontalAlignment="Left" Height="28" Margin="270,193,0,0" VerticalAlignment="Top" Width="116"/>
+            <Button x:Name="SimShipping_Button" Content="Livraison" HorizontalAlignment="Left" Height="28" Margin="163,250,0,0" VerticalAlignment="Top" Width="118" Click="SimShipping_Button_Click"/>
 
         </Grid>
 

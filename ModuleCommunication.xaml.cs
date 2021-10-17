@@ -47,9 +47,66 @@ namespace Projet_Pizzaria
             foreach(Client c in Client.getRegisteredClient())
             {
                 ComboBoxItem cbi = new ComboBoxItem();
-                cbi.Content = c.Address;
+                cbi.Content = c.PhoneNumber;
                 ClientComboBox.Items.Add(cbi);
             }
+        }
+
+        public void NewClientMessage(string phoneNumber, string msg)
+        {
+            try
+            {
+                if (phoneNumber == ClientComboBox.Text)
+                {
+                    ClientTextBlock.Text += msg;
+                    ClientTextBlock.Text += Environment.NewLine;
+                }
+            }
+            catch (Exception ex)
+            {
+                ClientTextBlock.Text += "Erreur : " + ex;
+                ClientTextBlock.Text += Environment.NewLine;
+            }
+        }
+
+        public void NewCommisMessage(string empId, string msg)
+        {
+            try
+            {
+                if (empId == CommisComboBox.Text)
+                {
+                    CommisTextBlock.Text += msg;
+                    CommisTextBlock.Text += Environment.NewLine;
+                }
+            }
+            catch (Exception ex)
+            {
+                CommisTextBlock.Text += "Erreur : " + ex;
+                CommisTextBlock.Text += Environment.NewLine;
+            }
+        }
+
+        public void NewDeliveryManMessage(string empId, string msg)
+        {
+            try
+            {
+                if (empId == DeliveryManComboBox.Text)
+                {
+                    DeliveryManTextBlock.Text += msg;
+                    DeliveryManTextBlock.Text += Environment.NewLine;
+                }
+            }
+            catch (Exception ex)
+            {
+                DeliveryManTextBlock.Text += "Erreur : " + ex;
+                DeliveryManTextBlock.Text += Environment.NewLine;
+            }
+        }
+
+        public void NewKitchenMessage(string msg)
+        {
+            KitchenTextBlock.Text += msg;
+            KitchenTextBlock.Text += Environment.NewLine;
         }
     }
 }

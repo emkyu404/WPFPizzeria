@@ -9,6 +9,7 @@ namespace Projet_Pizzaria
         private int number;
         private DateTime date;
         private string clientName;
+        private Client client;
         private bool paid;
         private List<Item> items;
         private OrderState orderState;
@@ -24,6 +25,7 @@ namespace Projet_Pizzaria
             this.items = l;
             this.number = ++numberInc;
             this.date = DateTime.Now;
+            this.client = c;
             this.clientName = c.Name;
             this.orderState = OrderState.preparing;
             Order.OrderList.Add(this.number,this);
@@ -34,6 +36,10 @@ namespace Projet_Pizzaria
             return OrderList[n];
         }
 
+        public int getNumber()
+        {
+            return this.number;
+        }
         public List<Item> getItems()
         {
             return items;
@@ -64,7 +70,11 @@ namespace Projet_Pizzaria
             return clientName;
         }
 
-        // faiblesse : Les clients ne peuvent pas porter le même nom
+        public Client getClient()
+        {
+            return client;
+        }
+
         public static List<Order> getAllOrderByClient(Client c)
         {
             List<Order> newList = new List<Order>();
@@ -77,11 +87,27 @@ namespace Projet_Pizzaria
             }
             return newList;
         }
+
+        public void isReady()
+        {
+            this.orderState = OrderState.readyToShip;
+        }
+
+        public void isShipping()
+        {
+            this.orderState = OrderState.shipping;
+        }
+
+        public void isPaid()
+        {
+            this.orderState = OrderState.paid;
+        }
     }
 
     public enum OrderState
     {
         preparing,
+        readyToShip,
         shipping,
         paid
     }

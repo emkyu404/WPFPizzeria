@@ -23,6 +23,7 @@ namespace Projet_Pizzaria
         public MainWindow()
         {
             InitializeComponent();
+            new Kitchen();
         }
 
         private void Button_Command_Click(object sender, RoutedEventArgs e)
@@ -35,6 +36,12 @@ namespace Projet_Pizzaria
         {
             Window wce = new MenuClientEmployee();
             wce.Show();
+        }
+
+        private void Button_Communication_Click(object sender, RoutedEventArgs e)
+        {
+            ModuleCommunication mc = new ModuleCommunication();
+            mc.Show();
         }
     }
 }

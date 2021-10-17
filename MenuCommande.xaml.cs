@@ -126,6 +126,7 @@ namespace Projet_Pizzaria
                 {
                     Order od = new Order(currentClient, currentItemList);
                     currentCommis.Orders.Add(od);
+                    NotifyCommunicationModule(od.getNumber());
                     MessageBox.Show("Commande créer ! N° de commande : " + Order.numberInc);
                     OrderManagementSelection oms = new OrderManagementSelection();
                     oms.Show();
@@ -133,7 +134,20 @@ namespace Projet_Pizzaria
                 }
             }catch(Exception ex)
             {
-                MessageBox.Show("Une erreur est survenu, vérifier qu'un Client a été affecté à la commande");
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void NotifyCommunicationModule(int odNumber)
+        {
+            foreach(Window item in Application.Current.Windows)
+            {
+                if (item.Title == "Module Communication")
+                {
+                    ModuleCommunication mc = (ModuleCommunication)item;
+                    mc.NewClientMessage(currentClient.PhoneNumber, "Votre commande a été enregistré. N° de commande : " + odNumber);
+                    mc.NewCommisMessage(currentCommis.getNumber().ToString(), "Vous avez pris en charge la commande N°" + odNumber);
+                }
             }
         }
 

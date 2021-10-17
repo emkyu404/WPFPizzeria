@@ -5,19 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Projet_Pizzaria"
         mc:Ignorable="d"
-        Title="ModuleCommunication" Height="450" Width="800">
+        Title="Module Communication" Height="450" Width="800">
     <Grid Height="434" VerticalAlignment="Top">
-        <Label x:Name="ClientLabel" Content="Partie Client" HorizontalAlignment="Left" Height="23" Margin="47,32,0,0" VerticalAlignment="Top" Width="79"/>
-        <Label x:Name="CommisLabel" Content="Partie Commis" HorizontalAlignment="Left" Height="23" Margin="488,32,0,0" VerticalAlignment="Top" Width="88" RenderTransformOrigin="0.321,0.53"/>
-        <Label x:Name="ClientLabel_Copy" Content="Partie Livreur" HorizontalAlignment="Left" Height="23" Margin="47,222,0,0" VerticalAlignment="Top" Width="79"/>
-        <Label x:Name="ClientLabel_Copy1" Content="Partie Cuisine" HorizontalAlignment="Left" Height="23" Margin="488,227,0,0" VerticalAlignment="Top" Width="80"/>
-        <TextBlock x:Name="DeliveryTextBlock" HorizontalAlignment="Left" Height="143" Margin="47,250,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="266" Background="Black" Foreground="White"/>
-        <TextBlock x:Name="ClientTextBlock" HorizontalAlignment="Left" Height="143" Margin="47,62,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="266" Background="Black" Foreground="White"/>
-        <TextBlock x:Name="CommisTextBlock" HorizontalAlignment="Left" Height="143" Margin="488,62,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="275" Background="Black" Foreground="White"/>
-        <TextBlock x:Name="KitchenTextBlock" HorizontalAlignment="Left" Height="143" Margin="488,255,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="276" Background="Black" Foreground="White"/>
-        <ComboBox x:Name="ClientComboBox" HorizontalAlignment="Left" Height="19" Margin="131,36,0,0" VerticalAlignment="Top" Width="182"/>
-        <ComboBox x:Name="CommisComboBox" HorizontalAlignment="Left" Height="19" Margin="582,36,0,0" VerticalAlignment="Top" Width="182"/>
-        <ComboBox x:Name="DeliveryManComboBox" HorizontalAlignment="Left" Height="19" Margin="131,224,0,0" VerticalAlignment="Top" Width="182"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="29*"/>
+            <ColumnDefinition Width="228*"/>
+            <ColumnDefinition Width="143*"/>
+        </Grid.ColumnDefinitions>
+        <Label x:Name="ClientLabel" Content="Partie Client" HorizontalAlignment="Left" Height="23" Margin="47,32,0,0" VerticalAlignment="Top" Width="79" Grid.ColumnSpan="2"/>
+        <Label x:Name="CommisLabel" Content="Partie Commis" HorizontalAlignment="Left" Height="23" Margin="430,32,0,0" VerticalAlignment="Top" Width="88" RenderTransformOrigin="0.321,0.53" Grid.Column="1" Grid.ColumnSpan="2"/>
+        <Label x:Name="ClientLabel_Copy" Content="Partie Livreur" HorizontalAlignment="Left" Height="23" Margin="47,222,0,0" VerticalAlignment="Top" Width="79" Grid.ColumnSpan="2"/>
+        <Label x:Name="ClientLabel_Copy1" Content="Partie Cuisine" HorizontalAlignment="Left" Height="23" Margin="429,222,0,0" VerticalAlignment="Top" Width="80" Grid.Column="1" Grid.ColumnSpan="2"/>
+        <TextBlock x:Name="DeliveryManTextBlock" HorizontalAlignment="Left" Height="143" Margin="47,250,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="266" Background="Black" Foreground="White" Grid.ColumnSpan="2"/>
+        <TextBlock x:Name="ClientTextBlock" HorizontalAlignment="Left" Height="143" Margin="47,62,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="266" Background="Black" Foreground="White" Grid.ColumnSpan="2"/>
+        <TextBlock x:Name="CommisTextBlock" HorizontalAlignment="Left" Height="143" Margin="430,62,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="275" Background="Black" Foreground="White" Grid.Column="1" Grid.ColumnSpan="2"/>
+        <TextBlock x:Name="KitchenTextBlock" HorizontalAlignment="Left" Height="143" Margin="429,250,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="276" Background="Black" Foreground="White" Grid.Column="1" Grid.ColumnSpan="2"/>
+        <ComboBox x:Name="ClientComboBox" HorizontalAlignment="Left" Height="19" Margin="73,36,0,0" VerticalAlignment="Top" Width="182" Grid.Column="1"/>
+        <ComboBox x:Name="CommisComboBox" HorizontalAlignment="Left" Height="19" Margin="68,36,0,0" VerticalAlignment="Top" Width="182" Grid.Column="2"/>
+        <ComboBox x:Name="DeliveryManComboBox" HorizontalAlignment="Left" Height="19" Margin="73,224,0,0" VerticalAlignment="Top" Width="182" Grid.Column="1"/>
 
     </Grid>
 </Window>
