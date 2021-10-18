@@ -38,3 +38,5 @@ E:\EFREI\Projet Pizzeria\WPFPizzeria\obj\Debug\netcoreapp3.1\Projet Pizzaria.dll
 E:\EFREI\Projet Pizzeria\WPFPizzeria\obj\Debug\netcoreapp3.1\Projet Pizzaria.pdb
 E:\EFREI\Projet Pizzeria\WPFPizzeria\obj\Debug\netcoreapp3.1\Projet Pizzaria.genruntimeconfig.cache
 E:\EFREI\Projet Pizzeria\WPFPizzeria\obj\Debug\netcoreapp3.1\Projet Pizzaria.csproj.AssemblyReference.cache
+E:\EFREI\Projet Pizzeria\WPFPizzeria\obj\Debug\netcoreapp3.1\ModuleStatistique.g.cs
+E:\EFREI\Projet Pizzeria\WPFPizzeria\obj\Debug\netcoreapp3.1\ModuleStatistique.baml

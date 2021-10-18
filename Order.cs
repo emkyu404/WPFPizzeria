@@ -102,6 +102,23 @@ namespace Projet_Pizzaria
         {
             this.orderState = OrderState.paid;
         }
+
+        public static float getAverageAllOrders()
+        {
+            if (Order.OrderList.Count <= 0)
+            {
+                return 0;
+            }
+            else
+            {
+                float result = 0;
+                foreach (KeyValuePair<int, Order> e in OrderList)
+                {
+                    result += e.Value.getTotalPrice();
+                }
+                return result / OrderList.Count;
+            }
+        }
     }
 
     public enum OrderState

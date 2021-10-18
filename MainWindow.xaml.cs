@@ -43,5 +43,11 @@ namespace Projet_Pizzaria
             ModuleCommunication mc = new ModuleCommunication();
             mc.Show();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            ModuleStatistique ms = new ModuleStatistique();
+            ms.Show();
+        }
     }
 }
