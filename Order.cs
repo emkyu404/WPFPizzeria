@@ -119,6 +119,41 @@ namespace Projet_Pizzaria
                 return result / OrderList.Count;
             }
         }
+
+        public static float getAveragePerClient()
+        {
+            if (Order.OrderList.Count <= 0)
+            {
+                return 0;
+            }
+            else
+            {
+                Dictionary<Client, List<Order>> cl = new Dictionary<Client, List<Order>>();
+                float result = 0;
+                foreach (KeyValuePair<int, Order> e in OrderList)
+                {
+                    if (!cl.ContainsKey(e.Value.getClient()))
+                    {
+                        cl.Add(e.Value.getClient(), new List<Order>());
+                        cl[e.Value.getClient()].Add(e.Value);
+                    }
+                    else
+                    {
+                        cl[e.Value.getClient()].Add(e.Value);
+                    }
+                }
+
+                foreach(KeyValuePair<Client, List<Order>> e in cl)
+                {
+                    foreach(Order o in e.Value)
+                    {
+                        result += o.getTotalPrice();
+                    }
+                }
+                return result / cl.Count;
+            }
+            
+        }
     }
 
     public enum OrderState

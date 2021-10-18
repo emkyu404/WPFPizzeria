@@ -23,6 +23,8 @@ namespace Projet_Pizzaria
         {
             InitializeComponent();
             InitializeComboBox();
+            SetAveragePerClient();
+            SetAveragePerOrder();
         }
 
         private void InitializeComboBox()
@@ -60,6 +62,42 @@ namespace Projet_Pizzaria
             {
                 NbOrderInput.Content = 0.ToString();
             }
+        }
+
+        private void DeliveryManButton_Click(object sender, RoutedEventArgs e)
+        {
+            currentDM = (DeliveryMan)Employee.RegisteredEmployees[Int32.Parse(CommisComboBox.Text)];
+            SetDeliveryManInfo();
+        }
+
+        private void SetDeliveryManInfo()
+        {
+            if (currentDM != null)
+            {
+                NbOrderInput.Content = currentDM.Orders.Count;
+            }
+            else
+            {
+                NbOrderInput.Content = 0.ToString();
+            }
+        }
+
+        private void SetAveragePerOrder()
+        {
+            AveragePriceOrders.Content = Order.getAverageAllOrders() + "€";
+        }
+
+        private void SetAveragePerClient()
+        {
+            AveragePricePerClient.Content = Order.getAveragePerClient() + "€";
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            SetAveragePerClient();
+            SetAveragePerOrder();
+            SetDeliveryManInfo();
+            SetCommisInfo();
         }
     }
 }

@@ -13,6 +13,7 @@ E:\EFREI\Projet Pizzeria\WPFPizzeria\obj\Debug\netcoreapp3.1\MainWindow.g.cs
 E:\EFREI\Projet Pizzeria\WPFPizzeria\obj\Debug\netcoreapp3.1\MenuClientEmployee.g.cs
 E:\EFREI\Projet Pizzeria\WPFPizzeria\obj\Debug\netcoreapp3.1\MenuCommande.g.cs
 E:\EFREI\Projet Pizzeria\WPFPizzeria\obj\Debug\netcoreapp3.1\ModuleCommunication.g.cs
+E:\EFREI\Projet Pizzeria\WPFPizzeria\obj\Debug\netcoreapp3.1\ModuleStatistique.g.cs
 E:\EFREI\Projet Pizzeria\WPFPizzeria\obj\Debug\netcoreapp3.1\OrderManagementSelection.g.cs
 E:\EFREI\Projet Pizzeria\WPFPizzeria\obj\Debug\netcoreapp3.1\WindowClient.g.cs
 E:\EFREI\Projet Pizzeria\WPFPizzeria\obj\Debug\netcoreapp3.1\WindowEmployee.g.cs
@@ -27,6 +28,7 @@ E:\EFREI\Projet Pizzeria\WPFPizzeria\obj\Debug\netcoreapp3.1\MainWindow.baml
 E:\EFREI\Projet Pizzeria\WPFPizzeria\obj\Debug\netcoreapp3.1\MenuClientEmployee.baml
 E:\EFREI\Projet Pizzeria\WPFPizzeria\obj\Debug\netcoreapp3.1\MenuCommande.baml
 E:\EFREI\Projet Pizzeria\WPFPizzeria\obj\Debug\netcoreapp3.1\ModuleCommunication.baml
+E:\EFREI\Projet Pizzeria\WPFPizzeria\obj\Debug\netcoreapp3.1\ModuleStatistique.baml
 E:\EFREI\Projet Pizzeria\WPFPizzeria\obj\Debug\netcoreapp3.1\OrderManagementSelection.baml
 E:\EFREI\Projet Pizzeria\WPFPizzeria\obj\Debug\netcoreapp3.1\WindowEmployee.baml
 E:\EFREI\Projet Pizzeria\WPFPizzeria\obj\Debug\netcoreapp3.1\Projet Pizzaria.g.resources
@@ -38,48 +40,3 @@ E:\EFREI\Projet Pizzeria\WPFPizzeria\obj\Debug\netcoreapp3.1\Projet Pizzaria.dll
 E:\EFREI\Projet Pizzeria\WPFPizzeria\obj\Debug\netcoreapp3.1\Projet Pizzaria.pdb
 E:\EFREI\Projet Pizzeria\WPFPizzeria\obj\Debug\netcoreapp3.1\Projet Pizzaria.genruntimeconfig.cache
 E:\EFREI\Projet Pizzeria\WPFPizzeria\obj\Debug\netcoreapp3.1\Projet Pizzaria.csproj.AssemblyReference.cache
-<<<<<<< HEAD
-E:\EFREI\Projet Pizzeria\WPFPizzeria\obj\Debug\netcoreapp3.1\ModuleStatistique.g.cs
-E:\EFREI\Projet Pizzeria\WPFPizzeria\obj\Debug\netcoreapp3.1\ModuleStatistique.baml
-=======
-C:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\bin\Debug\netcoreapp3.1\Projet Pizzaria.exe
-C:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\bin\Debug\netcoreapp3.1\Projet Pizzaria.deps.json
-C:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\bin\Debug\netcoreapp3.1\Projet Pizzaria.runtimeconfig.json
-C:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\bin\Debug\netcoreapp3.1\Projet Pizzaria.runtimeconfig.dev.json
-C:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\bin\Debug\netcoreapp3.1\Projet Pizzaria.dll
-C:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\bin\Debug\netcoreapp3.1\Projet Pizzaria.pdb
-C:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\obj\Debug\netcoreapp3.1\Projet Pizzaria.csproj.AssemblyReference.cache
-C:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\obj\Debug\netcoreapp3.1\WindowClient.baml
-C:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\obj\Debug\netcoreapp3.1\AjoutItems.g.cs
-C:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\obj\Debug\netcoreapp3.1\CommandeInfo.g.cs
-C:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\obj\Debug\netcoreapp3.1\Create_Client.g.cs
-C:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\obj\Debug\netcoreapp3.1\Create_Order_Page.g.cs
-C:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\obj\Debug\netcoreapp3.1\MainWindow.g.cs
-C:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\obj\Debug\netcoreapp3.1\MenuClientEmployee.g.cs
-C:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\obj\Debug\netcoreapp3.1\MenuCommande.g.cs
-C:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\obj\Debug\netcoreapp3.1\ModuleCommunication.g.cs
-C:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\obj\Debug\netcoreapp3.1\OrderManagementSelection.g.cs
-C:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\obj\Debug\netcoreapp3.1\WindowClient.g.cs
-C:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\obj\Debug\netcoreapp3.1\WindowEmployee.g.cs
-C:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\obj\Debug\netcoreapp3.1\App.g.cs
-C:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\obj\Debug\netcoreapp3.1\Projet Pizzaria_MarkupCompile.cache
-C:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\obj\Debug\netcoreapp3.1\Projet Pizzaria_MarkupCompile.lref
-C:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\obj\Debug\netcoreapp3.1\AjoutItems.baml
-C:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\obj\Debug\netcoreapp3.1\CommandeInfo.baml
-C:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\obj\Debug\netcoreapp3.1\Create_Client.baml
-C:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\obj\Debug\netcoreapp3.1\Create_Order_Page.baml
-C:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\obj\Debug\netcoreapp3.1\MainWindow.baml
-C:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\obj\Debug\netcoreapp3.1\MenuClientEmployee.baml
-C:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\obj\Debug\netcoreapp3.1\MenuCommande.baml
-C:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\obj\Debug\netcoreapp3.1\ModuleCommunication.baml
-C:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\obj\Debug\netcoreapp3.1\OrderManagementSelection.baml
-C:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\obj\Debug\netcoreapp3.1\WindowEmployee.baml
-C:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\obj\Debug\netcoreapp3.1\Projet Pizzaria.g.resources
-C:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\obj\Debug\netcoreapp3.1\Projet Pizzaria.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\obj\Debug\netcoreapp3.1\Projet Pizzaria.AssemblyInfoInputs.cache
-C:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\obj\Debug\netcoreapp3.1\Projet Pizzaria.AssemblyInfo.cs
-C:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\obj\Debug\netcoreapp3.1\Projet Pizzaria.csproj.CoreCompileInputs.cache
-C:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\obj\Debug\netcoreapp3.1\Projet Pizzaria.dll
-C:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\obj\Debug\netcoreapp3.1\Projet Pizzaria.pdb
-C:\Users\Antoine Cheng\Documents\GitHub\WPFPizzeria\obj\Debug\netcoreapp3.1\Projet Pizzaria.genruntimeconfig.cache
->>>>>>> 4211f0da6629b0710b90ccc67ca56fe99dbaac06
