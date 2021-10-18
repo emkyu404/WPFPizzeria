@@ -2,7 +2,7 @@ using System;
 
 namespace Projet_Pizzaria
 {
-    enum drinkType
+    public enum drinkType
     {
         juice,
         coke,
@@ -11,7 +11,7 @@ namespace Projet_Pizzaria
         iceTea
     }
 
-    class Drink : Item
+    public class Drink : Item
     {
         public drinkType dtype;
 

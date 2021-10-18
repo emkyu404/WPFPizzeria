@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Projet_Pizzaria
 {
-    class Kitchen
+    public class Kitchen
     {
         private static Kitchen instance = null;
 

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Projet_Pizzaria
 {
-    class Order
+    public class Order
     {
         private int number;
         private DateTime date;

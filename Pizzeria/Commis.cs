@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Projet_Pizzaria
 {
-    class Commis : Employee
+    public class Commis : Employee
     {
         public Commis(string name, string surname, Address address) : base(name, surname, address)
         {

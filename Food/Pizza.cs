@@ -1,7 +1,7 @@
 using System;
 
 namespace Projet_Pizzaria { 
-    enum PizzaType
+    public enum PizzaType
     {
         Margharita,
         Napoletana,
@@ -11,14 +11,14 @@ namespace Projet_Pizzaria {
         Formaggi 
     }
 
-    enum PizzaSize
+    public enum PizzaSize
     {
         small,
         medium,
         huge
     }
 
-    class Pizza : Item
+    public class Pizza : Item
     {
         PizzaSize size;
         PizzaType ptype;

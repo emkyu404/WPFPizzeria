@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Projet_Pizzaria
 {
-    class ItemComparer : IEqualityComparer<Item>
+    public class ItemComparer : IEqualityComparer<Item>
     {
         public bool Equals([AllowNull] Item x, [AllowNull] Item y)
         {

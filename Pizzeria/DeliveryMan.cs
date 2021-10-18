@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Projet_Pizzaria
 {
-    class DeliveryMan : Employee
+    public class DeliveryMan : Employee
     {
         public DeliveryMan(string name, string surname, Address address) : base(name, surname, address)
         {
