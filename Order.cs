@@ -10,7 +10,6 @@ namespace Projet_Pizzaria
         private DateTime date;
         private string clientName;
         private Client client;
-        private bool paid;
         private List<Item> items;
         private OrderState orderState;
 

@@ -33,7 +33,7 @@ namespace Projet_Pizzaria {
 
         public static float setPizzaPrice(PizzaSize s, PizzaType t)
         {
-            float sizePrice, typePrice, result;
+            float result;
             result = basePizzaPrice;
             switch (s)
             {

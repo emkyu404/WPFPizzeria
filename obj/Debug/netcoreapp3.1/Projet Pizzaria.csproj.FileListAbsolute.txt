@@ -8,7 +8,6 @@ E:\EFREI\Projet Pizzeria\WPFPizzeria\obj\Debug\netcoreapp3.1\WindowClient.baml
 E:\EFREI\Projet Pizzeria\WPFPizzeria\obj\Debug\netcoreapp3.1\AjoutItems.g.cs
 E:\EFREI\Projet Pizzeria\WPFPizzeria\obj\Debug\netcoreapp3.1\CommandeInfo.g.cs
 E:\EFREI\Projet Pizzeria\WPFPizzeria\obj\Debug\netcoreapp3.1\Create_Client.g.cs
-E:\EFREI\Projet Pizzeria\WPFPizzeria\obj\Debug\netcoreapp3.1\Create_Order_Page.g.cs
 E:\EFREI\Projet Pizzeria\WPFPizzeria\obj\Debug\netcoreapp3.1\MainWindow.g.cs
 E:\EFREI\Projet Pizzeria\WPFPizzeria\obj\Debug\netcoreapp3.1\MenuClientEmployee.g.cs
 E:\EFREI\Projet Pizzeria\WPFPizzeria\obj\Debug\netcoreapp3.1\MenuCommande.g.cs
@@ -23,7 +22,6 @@ E:\EFREI\Projet Pizzeria\WPFPizzeria\obj\Debug\netcoreapp3.1\Projet Pizzaria_Mar
 E:\EFREI\Projet Pizzeria\WPFPizzeria\obj\Debug\netcoreapp3.1\AjoutItems.baml
 E:\EFREI\Projet Pizzeria\WPFPizzeria\obj\Debug\netcoreapp3.1\CommandeInfo.baml
 E:\EFREI\Projet Pizzeria\WPFPizzeria\obj\Debug\netcoreapp3.1\Create_Client.baml
-E:\EFREI\Projet Pizzeria\WPFPizzeria\obj\Debug\netcoreapp3.1\Create_Order_Page.baml
 E:\EFREI\Projet Pizzeria\WPFPizzeria\obj\Debug\netcoreapp3.1\MainWindow.baml
 E:\EFREI\Projet Pizzeria\WPFPizzeria\obj\Debug\netcoreapp3.1\MenuClientEmployee.baml
 E:\EFREI\Projet Pizzeria\WPFPizzeria\obj\Debug\netcoreapp3.1\MenuCommande.baml

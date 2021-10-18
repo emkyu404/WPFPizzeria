@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
 E:\EFREI\Projet Pizzeria\WPFPizzeria\App.xaml
-12-1710605424
+11-198742216
 
-27-1272716286
+26-1670522352
 192-1533232326
-AjoutItems.xaml;CommandeInfo.xaml;Create_Client.xaml;Create_Order_Page.xaml;MainWindow.xaml;MenuClientEmployee.xaml;MenuCommande.xaml;ModuleCommunication.xaml;ModuleStatistique.xaml;OrderManagementSelection.xaml;WindowClient.xaml;WindowEmployee.xaml;
+AjoutItems.xaml;CommandeInfo.xaml;Create_Client.xaml;MainWindow.xaml;MenuClientEmployee.xaml;MenuCommande.xaml;ModuleCommunication.xaml;ModuleStatistique.xaml;OrderManagementSelection.xaml;WindowClient.xaml;WindowEmployee.xaml;
 
 True
 

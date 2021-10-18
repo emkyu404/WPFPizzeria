@@ -12,7 +12,6 @@ namespace Projet_Pizzaria
         private string phoneNumber;
         private DateTime firstOrderDate;
         private Address address;
-        private double total;
 
         public string Name
         {
