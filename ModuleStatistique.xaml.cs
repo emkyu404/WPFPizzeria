@@ -48,8 +48,11 @@ namespace Projet_Pizzaria
 
         private void CommisButton_Click(object sender, RoutedEventArgs e)
         {
-            currentCommis = (Commis)Employee.RegisteredEmployees[Int32.Parse(CommisComboBox.Text)];
-            SetCommisInfo();
+            if (CommisComboBox.Text != "")
+            {
+                currentCommis = (Commis)Employee.RegisteredEmployees[Int32.Parse(CommisComboBox.Text)];
+                SetCommisInfo();
+            }
         }
 
         private void SetCommisInfo()
@@ -66,19 +69,22 @@ namespace Projet_Pizzaria
 
         private void DeliveryManButton_Click(object sender, RoutedEventArgs e)
         {
-            currentDM = (DeliveryMan)Employee.RegisteredEmployees[Int32.Parse(CommisComboBox.Text)];
-            SetDeliveryManInfo();
+            if (DeliveryManComboBox.Text != "")
+            {
+                currentDM = (DeliveryMan)Employee.RegisteredEmployees[Int32.Parse(DeliveryManComboBox.Text)];
+                SetDeliveryManInfo();
+            }
         }
 
         private void SetDeliveryManInfo()
         {
             if (currentDM != null)
             {
-                NbOrderInput.Content = currentDM.Orders.Count;
+                NbDeliveryInput.Content = currentDM.Orders.Count;
             }
             else
             {
-                NbOrderInput.Content = 0.ToString();
+                NbDeliveryInput.Content = 0.ToString();
             }
         }
 
