@@ -149,7 +149,7 @@ namespace Projet_Pizzaria {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Projet Pizzaria;component/modulestatistique.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Projet Pizzaria;V1.0.0.0;component/modulestatistique.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\ModuleStatistique.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
