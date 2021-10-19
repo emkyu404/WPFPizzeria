@@ -72,7 +72,7 @@ namespace Projet_Pizzaria {
                 case "Margharita": return PizzaType.Margharita;
                 case "Napoletana": return PizzaType.Napoletana;
                 case "Parmegiana": return PizzaType.Parmegiana;
-                case "Vegan": return PizzaType.Vegan; break;
+                case "Vegan": return PizzaType.Vegan; 
                 default: throw new Exception();
             }
         }

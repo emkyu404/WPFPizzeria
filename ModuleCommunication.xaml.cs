@@ -108,5 +108,20 @@ namespace Projet_Pizzaria
             KitchenTextBlock.Text += msg;
             KitchenTextBlock.Text += Environment.NewLine;
         }
+
+        private void CommisComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            CommisTextBlock.Text = "";
+        }
+
+        private void ClientComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            ClientTextBlock.Text = "";
+        }
+
+        private void DeliveryManComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            DeliveryManTextBlock.Text = "";
+        }
     }
 }

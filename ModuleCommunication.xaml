@@ -30,9 +30,9 @@
         <ScrollViewer VerticalScrollBarVisibility="Auto" Margin="53,62,201,228" Grid.ColumnSpan="2">
             <TextBlock x:Name="ClientTextBlock" Height="Auto" MinHeight="143" TextWrapping="Wrap" Width="260" Background="Black" Foreground="White"/>
         </ScrollViewer>
-        <ComboBox x:Name="ClientComboBox" HorizontalAlignment="Left" Height="19" Margin="73,36,0,0" VerticalAlignment="Top" Width="182" Grid.Column="1"/>
-        <ComboBox x:Name="CommisComboBox" HorizontalAlignment="Left" Height="19" Margin="68,36,0,0" VerticalAlignment="Top" Width="166" Grid.Column="2"/>
-        <ComboBox x:Name="DeliveryManComboBox" HorizontalAlignment="Left" Height="19" Margin="73,224,0,0" VerticalAlignment="Top" Width="182" Grid.Column="1"/>
+        <ComboBox x:Name="ClientComboBox" HorizontalAlignment="Left" Height="19" Margin="73,36,0,0" VerticalAlignment="Top" Width="182" Grid.Column="1" SelectionChanged="ClientComboBox_SelectionChanged"/>
+        <ComboBox x:Name="CommisComboBox" HorizontalAlignment="Left" Height="19" Margin="68,36,0,0" VerticalAlignment="Top" Width="166" Grid.Column="2" SelectionChanged="CommisComboBox_SelectionChanged"/>
+        <ComboBox x:Name="DeliveryManComboBox" HorizontalAlignment="Left" Height="19" Margin="73,224,0,0" VerticalAlignment="Top" Width="182" Grid.Column="1" SelectionChanged="DeliveryManComboBox_SelectionChanged"/>
 
     </Grid>
 </Window>
